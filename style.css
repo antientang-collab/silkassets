@@ -174,3 +174,94 @@ footer {
 .view-all::after { content: ''; width: 40px; height: 1px; background: var(--gold); transition: width 0.3s; }
 .view-all:hover { opacity: 1; }
 .view-all:hover::after { width: 60px; }
+
+/* ===== 响应式手机适配 ===== */
+@media (max-width: 768px) {
+
+  /* 导航栏 */
+  nav {
+    padding: 20px 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  /* 首页Hero */
+  #hero {
+    padding: 120px 24px 80px;
+  }
+
+  /* 分类标题区 */
+  .cat-section {
+    padding: 60px 24px 0;
+  }
+  .cat-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .cat-right {
+    align-items: flex-start;
+  }
+
+  /* 2x2网格改成单栏 */
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* 产品网格改成单栏 */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 页面标题区 */
+  .page-header {
+    padding: 100px 24px 48px !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* 产品卡片内容 */
+  .card-body {
+    padding: 20px 20px 24px;
+  }
+
+  /* motif装饰条 */
+  .motif-strip::before {
+    left: 24px;
+    right: 24px;
+  }
+
+  /* grid-wrap */
+  .grid-wrap {
+    padding: 0 24px 60px !important;
+  }
+
+  /* 联系区 */
+  #contact {
+    padding: 60px 24px 0 !important;
+    margin: 60px auto 0 !important;
+  }
+  #contact > div {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+
+  /* footer */
+  footer {
+    padding: 40px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* VIEW ALL */
+  .view-all-wrap {
+    margin-top: 32px;
+  }
+
+  /* 隐私政策页面 */
+  .policy-wrap {
+    padding: 100px 24px 60px !important;
+  }
+}
