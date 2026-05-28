@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SilkAssets — From the Silk Road to Your Screen</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 140px 80px 100px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(45,74,53,0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, rgba(201,168,76,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 30% at 85% 15%, rgba(201,168,76,0.05) 0%, transparent 50%);
+}
+.hero-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.7; margin-bottom: 36px;
+  display: flex; align-items: center; gap: 18px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+.hero-badge::before, .hero-badge::after {
+  content: ''; width: 36px; height: 1px; background: var(--gold); opacity: 0.4;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 7.5vw, 108px);
+  font-weight: 300; line-height: 1.0; letter-spacing: 0.01em;
+  color: var(--cream); margin-bottom: 16px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+.hero-title em { font-style: italic; color: var(--gold-light); }
+.hero-sub {
+  font-family: 'Cinzel', serif; font-size: 11px;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--cream); opacity: 0.4; margin-bottom: 52px;
+  animation: fadeUp 1s ease 0.6s both;
+}
+.hero-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(19px, 2vw, 25px); font-weight: 300; font-style: italic;
+  color: var(--cream); opacity: 0.65;
+  max-width: 640px; line-height: 1.7; margin-bottom: 72px;
+  animation: fadeUp 1s ease 0.8s both;
+}
+.hero-cta { display: flex; gap: 20px; animation: fadeUp 1s ease 1s both; }
+.scroll-hint {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.35;
+  animation: fadeUp 1s ease 1.3s both;
+}
+.scroll-hint span { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; }
+.scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+/* CATEGORY SECTION */
+.cat-section { padding: 100px 80px 0; max-width: 1600px; margin: 0 auto; }
+.cat-header {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 80px; align-items: end; margin-bottom: 64px;
+}
+.cat-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 4vw, 60px); font-weight: 300;
+  color: var(--cream); line-height: 1.1;
+}
+.cat-title em { font-style: italic; color: var(--gold-light); }
+.cat-desc {
+  font-size: 17px; font-weight: 300;
+  color: var(--cream); opacity: 0.55; line-height: 1.75;
+  max-width: 460px;
+}
+.cat-right { display: flex; flex-direction: column; align-items: flex-end; gap: 28px; }
+
+/* FEATURED GRID: 2 large + 1 tall */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.card-span-2 { grid-column: span 2; }
+.card-tall { grid-row: span 2; }
+
+.featured-grid .card-img { aspect-ratio: 16/9; }
+.card-tall .card-img { aspect-ratio: unset; height: 280px; }
+
+/* VIEW ALL LINK */
+.view-all-wrap { margin-top: 48px; display: flex; justify-content: center; }
+.view-all {
+  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; opacity: 0.7;
+  display: flex; align-items: center; gap: 16px;
+  transition: opacity 0.3s; cursor: none;
+}
+.view-all::after { content: ''; width: 40px; height: 1px; background: var(--gold); transition: width 0.3s; }
+.view-all:hover { opacity: 1; }
+.view-all:hover::after { width: 60px; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;margin-right:10px;vertical-align:middle;border:1px solid rgba(201,168,76,0.3);">SilkAssets</a>
+  <ul class="nav-links">
+    <li><a href="video.html">Video</a></li>
+    <li><a href="images.html">Images</a></li>
+    <li><a href="sound.html">Sound Effects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-badge">Chinese Digital Assets</div>
+  <h1 class="hero-title">From the <em>Silk Road</em><br>to Your Screen</h1>
+  <p class="hero-sub">Videos · Images · Sound Effects</p>
+  <p class="hero-desc">From the Silk Road to neon streets — Chinese-inspired assets for every story you tell.</p>
+  <div class="hero-cta">
+    <a href="video.html" class="btn-buy">Explore Collections</a>
+    <a href="#contact" class="btn-outline">Get in Touch</a>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- VIDEO SECTION -->
+<div class="motif-strip"><span class="motif-text">水墨丹青 · Ink and Motion · 古韻今聲</span></div>
+
+<div class="cat-section reveal">
+  <div class="cat-header">
+    <div>
+      <div class="section-label">Collection 01</div>
+      <h2 class="cat-title">HD Video<br><em>Backgrounds</em></h2>
+    </div>
+    <div class="cat-right">
+      <p class="cat-desc">HD video backgrounds rooted in Chinese aesthetics — ancient architecture, moonlit gardens, flowing waterfalls, and mystical landscapes in motion.</p>
+    </div>
+  </div>
+
+  <div class="featured-grid reveal delay-1">
+    <!-- Card 1: Featured large -->
+    <div class="product-card card-span-2">
+      <div class="card-img">
+        <div class="card-img-inner pattern-a"></div>
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Vol. 1 · 60 Videos · Full HD</div>
+        <div class="card-title">Chinese Aesthetic Scene Animations</div>
+        <div class="card-desc">Ancient architecture, moonlit gardens & mystical landscapes. 1080p MP4 format, ready to use.</div>
+        <div class="card-footer">
+          <span class="card-price">$19</span>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Tall -->
+    <div class="product-card card-tall">
+      <div class="card-img">
+        <div class="card-img-inner pattern-b"></div>
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Vol. 2 · 60 Videos</div>
+        <div class="card-title">Scene Animations Vol. 2</div>
+        <div class="card-desc">Flowing waterfalls, glowing lanterns & celestial scenes.</div>
+        <div class="card-footer">
+          <span class="card-price">$19</span>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Bundle -->
+    <div class="product-card card-span-2">
+      <div class="card-img">
+        <div class="card-img-inner pattern-c"></div>
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Complete Bundle · 120 Videos · Best Value</div>
+        <div class="card-title">Complete Collection — Vol. 1 + Vol. 2</div>
+        <div class="card-desc">The full Chinese aesthetic video library. Save $9 with the complete bundle.</div>
+        <div class="card-footer">
+          <span class="card-price">$29 <span class="card-price-old">$38</span></span>
+          <a href="#" class="btn-buy">Buy Bundle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-all-wrap reveal delay-2">
+    <a href="video.html" class="view-all">View All Videos</a>
+  </div>
+</div>
+
+<!-- IMAGES SECTION -->
+<div class="motif-strip" style="margin-top: 100px;"><span class="motif-text">筆墨紙硯 · Brush and Ink · 東方美學</span></div>
+
+<div class="cat-section reveal">
+  <div class="cat-header">
+    <div>
+      <div class="section-label">Collection 02</div>
+      <h2 class="cat-title">Design<br><em>Assets</em></h2>
+    </div>
+    <div class="cat-right">
+      <p class="cat-desc">From ink wash to modern design elements — illustrations, patterns, and motifs bridging centuries of Chinese artistry.</p>
+    </div>
+  </div>
+
+  <div class="featured-grid reveal delay-1">
+    <div class="product-card card-span-2">
+      <div class="card-img">
+        <div class="card-img-inner pattern-b"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Ink Wash Illustrations</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">PNG · SVG · Transparent Background</div>
+        <div class="card-title">Chinese Ink Wash Illustration Pack</div>
+        <div class="card-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes.</div>
+        <div class="card-footer">
+          <span class="card-price" style="opacity:0.4;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-tall">
+      <div class="card-img">
+        <div class="card-img-inner pattern-a"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Pattern Collections</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Seamless Patterns</div>
+        <div class="card-title">Chinese Pattern & Motif Pack</div>
+        <div class="card-desc">Seamless patterns rooted in traditional Chinese textile and ceramic designs.</div>
+        <div class="card-footer">
+          <span class="card-price" style="opacity:0.4;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-all-wrap reveal delay-2">
+    <a href="images.html" class="view-all">View All Images</a>
+  </div>
+</div>
+
+<!-- SOUND SECTION -->
+<div class="motif-strip" style="margin-top: 100px;"><span class="motif-text">天籟之音 · Sounds of Heaven · 自然之聲</span></div>
+
+<div class="cat-section reveal">
+  <div class="cat-header">
+    <div>
+      <div class="section-label">Collection 03</div>
+      <h2 class="cat-title">Sound<br><em>Effects</em></h2>
+    </div>
+    <div class="cat-right">
+      <p class="cat-desc">Natural and urban sounds captured across China — from misty mountain forests to the pulse of ancient city streets.</p>
+    </div>
+  </div>
+
+  <div class="featured-grid reveal delay-1">
+    <div class="product-card card-span-2">
+      <div class="card-img">
+        <div class="card-img-inner pattern-c"></div>
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">100 WAV Files · High Quality</div>
+        <div class="card-title">Natural Environment Sound Effects Pack</div>
+        <div class="card-desc">Forests, rivers, rain, wind, temples, and city ambience. Professional WAV format, royalty-free.</div>
+        <div class="card-footer">
+          <span class="card-price">$15</span>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-tall">
+      <div class="card-img">
+        <div class="card-img-inner pattern-a"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Urban Soundscapes</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Urban China Series</div>
+        <div class="card-title">Urban China Soundscapes</div>
+        <div class="card-desc">The pulse of modern Chinese cities — markets, streets, festivals.</div>
+        <div class="card-footer">
+          <span class="card-price" style="opacity:0.4;">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-all-wrap reveal delay-2">
+    <a href="sound.html" class="view-all">View All Sound Effects</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" style="padding: 120px 80px 0; max-width: 1400px; margin: 120px auto 0;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start;">
+    <div class="reveal">
+      <div class="section-label">Get in Touch</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size: clamp(40px,4vw,60px); font-weight:300; color:var(--cream); line-height:1.1; margin-bottom:32px;">Let's<br><em style="font-style:italic; color:var(--gold-light);">Connect</em></h2>
+      <a href="mailto:hello@silkassets.top" style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:var(--gold-light); text-decoration:none; display:inline-block; margin-bottom:52px; border-bottom:1px solid var(--gold-dim); padding-bottom:8px;">hello@silkassets.top</a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <a href="https://pinterest.com/silkassetsstudio" target="_blank" style="display:flex; align-items:center; gap:14px; padding:18px 22px; border:1px solid var(--mist2); text-decoration:none; transition:border-color 0.3s;">
+          <span style="font-size:18px; color:var(--gold); opacity:0.7;">𝐏</span>
+          <div><div style="font-family:'Cinzel',serif; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:3px;">Pinterest</div><div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); opacity:0.65;">silkassetsstudio</div></div>
+        </a>
+        <a href="https://instagram.com/silkassetsstudio" target="_blank" style="display:flex; align-items:center; gap:14px; padding:18px 22px; border:1px solid var(--mist2); text-decoration:none; transition:border-color 0.3s;">
+          <span style="font-size:18px; color:var(--gold); opacity:0.7;">◉</span>
+          <div><div style="font-family:'Cinzel',serif; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:3px;">Instagram</div><div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); opacity:0.65;">@silkassetsstudio</div></div>
+        </a>
+        <a href="https://twitter.com/SilkAssets" target="_blank" style="display:flex; align-items:center; gap:14px; padding:18px 22px; border:1px solid var(--mist2); text-decoration:none; transition:border-color 0.3s;">
+          <span style="font-size:18px; color:var(--gold); opacity:0.7;">𝕏</span>
+          <div><div style="font-family:'Cinzel',serif; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:3px;">Twitter / X</div><div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); opacity:0.65;">@SilkAssets</div></div>
+        </a>
+        <a href="#" style="display:flex; align-items:center; gap:14px; padding:18px 22px; border:1px solid var(--mist2); text-decoration:none; transition:border-color 0.3s;">
+          <span style="font-size:18px; color:var(--gold); opacity:0.7;">💬</span>
+          <div><div style="font-family:'Cinzel',serif; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:3px;">WhatsApp</div><div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); opacity:0.65;">SilkAssets</div></div>
+        </a>
+      </div>
+    </div>
+    <div class="reveal delay-2" style="display:flex; flex-direction:column; gap:40px; padding-top:60px;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:32px; font-style:italic; font-weight:300; color:var(--cream); opacity:0.55; line-height:1.5;">"Every story deserves<br>the beauty of the East."</p>
+      <div style="border-left:1px solid var(--gold-dim); padding-left:32px; display:flex; flex-direction:column; gap:24px;">
+        <div><div style="font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:6px;">License</div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--cream); opacity:0.65;">Personal & Commercial Use</div></div>
+        <div><div style="font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:6px;">Formats</div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--cream); opacity:0.65;">MP4 · PNG · SVG · WAV</div></div>
+        <div><div style="font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:6px;">Delivery</div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--cream); opacity:0.65;">Instant Digital Download</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">SilkAssets</a>
+  <span class="footer-tagline">From the Silk Road to Your Screen</span>
+  <span class="footer-copy">© 2026 SilkAssets · hello@silkassets.top</span>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+function animRing(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); }
+animRing();
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
+reveals.forEach(r => obs.observe(r));
+</script>
+</body>
+</html>

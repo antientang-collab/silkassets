@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Assets — SilkAssets</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-header { padding: 160px 80px 80px; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 84px); font-weight: 300; color: var(--cream); line-height: 1.05; }
+.page-title em { font-style: italic; color: var(--gold-light); }
+.page-desc { font-size: 18px; font-weight: 300; color: var(--cream); opacity: 0.55; line-height: 1.75; max-width: 440px; align-self: end; }
+.grid-wrap { padding: 0 80px 80px; max-width: 1400px; margin: 0 auto; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;margin-right:10px;vertical-align:middle;border:1px solid rgba(201,168,76,0.3);">SilkAssets</a>
+  <ul class="nav-links">
+    <li><a href="video.html">Video</a></li>
+    <li><a href="images.html" class="active">Images</a></li>
+    <li><a href="sound.html">Sound Effects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="reveal">
+    <div class="section-label">Collection 02</div>
+    <h1 class="page-title">Design<br><em>Assets</em></h1>
+  </div>
+  <p class="page-desc reveal delay-1">From ink wash to modern design elements — illustrations, patterns, and motifs bridging centuries of Chinese artistry with contemporary creative needs.</p>
+</div>
+
+<div class="motif-strip"><span class="motif-text">筆墨紙硯 · Brush and Ink · 東方美學</span></div>
+
+<div class="grid-wrap">
+  <div class="product-grid">
+
+    <div class="product-card reveal">
+      <div class="card-img">
+        <div class="card-img-inner pattern-b"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Ink Wash Illustrations</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">PNG · SVG · Transparent</div>
+        <div class="card-title">Chinese Ink Wash Illustration Pack</div>
+        <div class="card-desc">Traditional ink wash style — mountains, flowers, birds, and landscapes.</div>
+        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal delay-1">
+      <div class="card-img">
+        <div class="card-img-inner pattern-c"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Pattern Collections</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Seamless Patterns</div>
+        <div class="card-title">Chinese Pattern & Motif Pack</div>
+        <div class="card-desc">Seamless patterns from traditional Chinese textile and ceramic designs.</div>
+        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal delay-2">
+      <div class="card-img">
+        <div class="card-img-inner pattern-a"></div>
+        <div class="card-img-overlay"></div>
+        <div class="card-coming-overlay">
+          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
+          <div class="coming-label">Coming Soon</div>
+          <div class="coming-sub">Festival Graphics</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Lunar Festival Series</div>
+        <div class="card-title">Lunar Festival Graphic Elements</div>
+        <div class="card-desc">Spring Festival, Mid-Autumn, and Lantern Festival themed graphic elements.</div>
+        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">SilkAssets</a>
+  <span class="footer-tagline">From the Silk Road to Your Screen</span>
+  <span class="footer-copy">© 2026 SilkAssets · hello@silkassets.top</span>
+</footer>
+
+<script>
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);}
+animRing();
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
