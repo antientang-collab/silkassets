@@ -181,9 +181,19 @@ footer {
   /* 导航栏 */
   nav {
     padding: 20px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .nav-links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-links a {
+    font-size: 13px;
+    letter-spacing: 0.2em;
   }
 
   /* 首页Hero */
