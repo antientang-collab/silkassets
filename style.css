@@ -36,8 +36,13 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Cinzel', serif; font-size: 17px; font-weight: 600;
+  font-family: 'Cinzel', serif; font-size: 20px; font-weight: 600;
   letter-spacing: 0.3em; color: var(--gold); text-decoration: none;
+  display: flex; align-items: center;
+}
+
+.nav-logo img {
+  width: 44px !important; height: 44px !important;
 }
 
 .nav-links { display: flex; gap: 52px; list-style: none; }
@@ -156,3 +161,16 @@ footer {
   transition: border-color 0.3s, color 0.3s, transform 0.2s; display: inline-block;
 }
 .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); transform: translateY(-1px); }
+
+/* VIEW ALL */
+.view-all-wrap { margin-top: 48px; display: flex; justify-content: center; }
+.view-all {
+  font-family: 'Cinzel', serif; font-size: 13px; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; opacity: 0.8;
+  display: flex; align-items: center; gap: 16px;
+  transition: opacity 0.3s; cursor: pointer;
+}
+.view-all::after { content: ''; width: 40px; height: 1px; background: var(--gold); transition: width 0.3s; }
+.view-all:hover { opacity: 1; }
+.view-all:hover::after { width: 60px; }
