@@ -176,6 +176,7 @@ footer {
 .view-all:hover::after { width: 60px; }
 
 
+
 /* ===== 响应式手机适配 ===== */
 @media (max-width: 768px) {
 
@@ -219,14 +220,38 @@ footer {
     max-width: 100% !important;
   }
 
-  /* 2x2网格改成单栏 */
+  /* 2x2网格改成单栏全宽 */
   .grid-2x2 {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
   /* 产品网格改成单栏 */
   .product-grid {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* 产品卡片全宽，图片保持16:9 */
+  .product-card {
+    width: 100%;
+  }
+  .card-img {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+  .card-body {
+    padding: 16px 16px 20px;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-desc {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .card-price {
+    font-size: 22px;
   }
 
   /* 页面标题区 */
@@ -241,18 +266,20 @@ footer {
     padding: 0 20px 60px !important;
   }
 
-  /* 产品卡片 */
-  .card-body {
-    padding: 18px 18px 22px;
-  }
-  .card-title {
-    font-size: 20px;
-  }
-
   /* motif装饰条 */
   .motif-strip::before {
     left: 20px;
     right: 20px;
+  }
+
+  /* VIEW ALL — 一行显示，字体缩小 */
+  .view-all-wrap {
+    margin-top: 32px;
+  }
+  .view-all {
+    font-size: 11px !important;
+    letter-spacing: 0.25em !important;
+    white-space: nowrap;
   }
 
   /* 联系区 */
@@ -273,11 +300,6 @@ footer {
     align-items: flex-start;
     gap: 12px;
     margin-top: 60px;
-  }
-
-  /* VIEW ALL */
-  .view-all-wrap {
-    margin-top: 32px;
   }
 
   /* 隐私政策页面 */
