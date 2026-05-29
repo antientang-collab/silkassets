@@ -206,7 +206,7 @@ footer {
 
   /* 分类标题区 */
   .cat-section {
-    padding: 60px 20px 0;
+    padding: 60px 0 0;
   }
   .cat-header {
     grid-template-columns: 1fr !important;
