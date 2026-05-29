@@ -220,10 +220,10 @@ footer {
     max-width: 100% !important;
   }
 
-  /* 2x2网格改成单栏全宽 */
+  /* 2x2网格手机上保持2列 */
   .grid-2x2 {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
   }
 
   /* 产品网格改成单栏 */
