@@ -241,17 +241,27 @@ footer {
     width: 100%;
   }
   .card-body {
-    padding: 16px 16px 20px;
+    padding: 12px 14px 14px;
+  }
+  .card-tag {
+    font-size: 7px;
+    margin-bottom: 6px;
   }
   .card-title {
-    font-size: 20px;
+    font-size: 17px;
+    margin-bottom: 6px;
   }
   .card-desc {
-    font-size: 13px;
-    margin-bottom: 16px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    line-height: 1.5;
   }
   .card-price {
-    font-size: 22px;
+    font-size: 20px;
+  }
+  .btn-buy {
+    font-size: 8px;
+    padding: 10px 16px;
   }
 
   /* 页面标题区 */
