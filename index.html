@@ -8,7 +8,6 @@
 <title>SilkAssets — From the Silk Road to Your Screen</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* HERO */
 #hero {
   min-height: 100vh;
   display: flex; flex-direction: column;
@@ -65,8 +64,6 @@
 .scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse 2s ease infinite; }
 @keyframes pulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-
-/* CATEGORY SECTION */
 .cat-section { padding: 100px 80px 0; max-width: 1600px; margin: 0 auto; }
 .cat-header {
   display: grid; grid-template-columns: 1fr 1.4fr;
@@ -84,21 +81,13 @@
   max-width: 460px;
 }
 .cat-right { display: flex; flex-direction: column; align-items: flex-end; gap: 28px; }
-
-/* 2x2 GRID */
 .grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.grid-2x2 .card-img {
-  aspect-ratio: 16/9;
-}
-.grid-2x2 .card-img img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-}
-
-/* VIEW ALL LINK */
+.grid-2x2 .card-img { aspect-ratio: 16/9; }
+.grid-2x2 .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .view-all-wrap { margin-top: 48px; display: flex; justify-content: center; }
 .view-all {
   font-family: 'Cinzel', serif; font-size: 24px; font-weight: 400;
@@ -110,25 +99,12 @@
 .view-all::after { content: ''; width: 40px; height: 1px; background: var(--gold); transition: width 0.3s; }
 .view-all:hover { opacity: 1; }
 .view-all:hover::after { width: 60px; }
-
 @media (max-width: 768px) {
-  .cat-section {
-    padding: 60px 0 0 !important;
-  }
-  .cat-header {
-    padding: 0 20px !important;
-  }
-  .grid-2x2 {
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-  }
-  .view-all-wrap {
-    padding: 0 20px !important;
-  }
-  .view-all {
-    font-size: 13px !important;
-    white-space: nowrap !important;
-  }
+  .cat-section { padding: 60px 0 0 !important; }
+  .cat-header { padding: 0 20px !important; }
+  .grid-2x2 { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .view-all-wrap { padding: 0 20px !important; }
+  .view-all { font-size: 13px !important; white-space: nowrap !important; }
 }
 </style>
 </head>
@@ -143,6 +119,7 @@
     <li><a href="video.html">Video</a></li>
     <li><a href="images.html">Images</a></li>
     <li><a href="sound.html">Sound Effects</a></li>
+    <li><a href="scene.html">Scene Packs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -152,7 +129,7 @@
   <div class="hero-bg"></div>
   <div class="hero-badge">Chinese Digital Assets</div>
   <h1 class="hero-title">From the <em>Silk Road</em><br>to Your Screen</h1>
-  <p class="hero-sub">Videos · Images · Sound Effects</p>
+  <p class="hero-sub">Videos · Images · Sound Effects · Scene Packs</p>
   <p class="hero-desc">From the Silk Road to neon streets — Chinese-inspired assets for every story you tell.</p>
   <div class="hero-cta">
     <a href="video.html" class="btn-buy">Explore Collections</a>
@@ -174,7 +151,6 @@
       <p class="cat-desc">HD video backgrounds rooted in Chinese aesthetics — ancient architecture, moonlit gardens, flowing waterfalls, and mystical landscapes in motion.</p>
     </div>
   </div>
-
   <div class="grid-2x2 reveal delay-1">
     <div class="product-card">
       <div class="card-img"><img src="Vol.1.webp" alt="Vol.1"></div>
@@ -185,7 +161,6 @@
         <div class="card-footer"><span class="card-price">$14.99</span><a href="https://www.creem.io/payment/prod_28AXPTFShT9ygXWJZBV0bv" class="btn-buy" target="_blank">Buy Now</a></div>
       </div>
     </div>
-
     <div class="product-card">
       <div class="card-img"><img src="Vol.2.webp" alt="Vol.2"></div>
       <div class="card-body">
@@ -195,7 +170,6 @@
         <div class="card-footer"><span class="card-price">$14.99</span><a href="https://www.creem.io/payment/prod_1DCTyGwbWkyksurYnS5aIV" class="btn-buy" target="_blank">Buy Now</a></div>
       </div>
     </div>
-
     <div class="product-card">
       <div class="card-img"><img src="Vol.1+2.webp" alt="Bundle"></div>
       <div class="card-body">
@@ -205,7 +179,6 @@
         <div class="card-footer"><span class="card-price">$23.99 <span class="card-price-old">$29.98</span></span><a href="https://www.creem.io/payment/prod_6c55m14XdeixfwMKkJkkxk" class="btn-buy" target="_blank">Buy Bundle</a></div>
       </div>
     </div>
-
     <div class="product-card">
       <div class="card-img">
         <div class="card-img-inner pattern-a"></div>
@@ -224,7 +197,6 @@
       </div>
     </div>
   </div>
-
   <div class="view-all-wrap reveal delay-2">
     <a href="video.html" class="view-all">View All Videos</a>
   </div>
@@ -243,81 +215,24 @@
       <p class="cat-desc">From ink wash to modern design elements — illustrations, patterns, and motifs bridging centuries of Chinese artistry.</p>
     </div>
   </div>
-
   <div class="grid-2x2 reveal delay-1">
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-b"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Ink Wash Illustrations</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">PNG · SVG · Transparent Background</div>
-        <div class="card-title">Chinese Ink Wash Illustration Pack</div>
-        <div class="card-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-b"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Ink Wash Illustrations</div></div></div>
+      <div class="card-body"><div class="card-tag">PNG · SVG · Transparent Background</div><div class="card-title">Chinese Ink Wash Illustration Pack</div><div class="card-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-a"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Pattern Collections</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Seamless Patterns</div>
-        <div class="card-title">Chinese Pattern & Motif Pack</div>
-        <div class="card-desc">Seamless patterns rooted in traditional Chinese textile and ceramic designs.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-a"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Pattern Collections</div></div></div>
+      <div class="card-body"><div class="card-tag">Seamless Patterns</div><div class="card-title">Chinese Pattern & Motif Pack</div><div class="card-desc">Seamless patterns rooted in traditional Chinese textile and ceramic designs.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-c"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Calligraphy Elements</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Brush Calligraphy</div>
-        <div class="card-title">Chinese Calligraphy Element Pack</div>
-        <div class="card-desc">Authentic brush calligraphy strokes and characters for design projects.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-c"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Calligraphy Elements</div></div></div>
+      <div class="card-body"><div class="card-tag">Brush Calligraphy</div><div class="card-title">Chinese Calligraphy Element Pack</div><div class="card-desc">Authentic brush calligraphy strokes and characters for design projects.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-b"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Festival Assets</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Lunar Festival Series</div>
-        <div class="card-title">Chinese Festival Illustration Pack</div>
-        <div class="card-desc">Festive illustrations for Spring Festival, Mid-Autumn, and more.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-b"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Festival Assets</div></div></div>
+      <div class="card-body"><div class="card-tag">Lunar Festival Series</div><div class="card-title">Chinese Festival Illustration Pack</div><div class="card-desc">Festive illustrations for Spring Festival, Mid-Autumn, and more.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
   </div>
-
   <div class="view-all-wrap reveal delay-2">
     <a href="images.html" class="view-all">View All Images</a>
   </div>
@@ -336,78 +251,62 @@
       <p class="cat-desc">Natural and urban sounds captured across China — from misty mountain forests to the pulse of ancient city streets.</p>
     </div>
   </div>
-
   <div class="grid-2x2 reveal delay-1">
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-c"></div>
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">100 WAV Files · High Quality</div>
-        <div class="card-title">Natural Environment Sound Effects Pack</div>
-        <div class="card-desc">Forests, rivers, rain, wind, temples, and city ambience. Professional WAV format, royalty-free.</div>
-        <div class="card-footer"><span class="card-price">$15</span><a href="#" class="btn-buy">Buy Now</a></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-c"></div><div class="card-img-overlay"></div></div>
+      <div class="card-body"><div class="card-tag">100 WAV Files · High Quality</div><div class="card-title">Natural Environment Sound Effects Pack</div><div class="card-desc">Forests, rivers, rain, wind, temples, and city ambience. Professional WAV format, royalty-free.</div><div class="card-footer"><span class="card-price">$9.99</span><a href="#" class="btn-buy">Buy Now</a></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-a"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Urban Soundscapes</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Urban China Series</div>
-        <div class="card-title">Urban China Soundscapes</div>
-        <div class="card-desc">The pulse of modern Chinese cities — markets, streets, festivals.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-a"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Urban Soundscapes</div></div></div>
+      <div class="card-body"><div class="card-tag">Urban China Series</div><div class="card-title">Urban China Soundscapes</div><div class="card-desc">The pulse of modern Chinese cities — markets, streets, festivals.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-b"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Traditional Instruments</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Music & Ambience</div>
-        <div class="card-title">Traditional Chinese Instrument Pack</div>
-        <div class="card-desc">Erhu, guqin, pipa, and bamboo flute recordings for cinematic use.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-b"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Traditional Instruments</div></div></div>
+      <div class="card-body"><div class="card-tag">Music & Ambience</div><div class="card-title">Traditional Chinese Instrument Pack</div><div class="card-desc">Erhu, guqin, pipa, and bamboo flute recordings for cinematic use.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
-
     <div class="product-card">
-      <div class="card-img">
-        <div class="card-img-inner pattern-c"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Temple & Nature</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Meditation Series</div>
-        <div class="card-title">Temple & Mountain Ambience Pack</div>
-        <div class="card-desc">Peaceful temple bells, mountain winds, and flowing water for meditation content.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+      <div class="card-img"><div class="card-img-inner pattern-c"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Temple & Nature</div></div></div>
+      <div class="card-body"><div class="card-tag">Meditation Series</div><div class="card-title">Temple & Mountain Ambience Pack</div><div class="card-desc">Peaceful temple bells, mountain winds, and flowing water for meditation content.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
     </div>
   </div>
-
   <div class="view-all-wrap reveal delay-2">
     <a href="sound.html" class="view-all">View All Sound Effects</a>
+  </div>
+</div>
+
+<!-- SCENE PACKS SECTION -->
+<div class="motif-strip" style="margin-top: 100px;"><span class="motif-text">古今中外 · Worlds Beyond · 無限場景</span></div>
+
+<div class="cat-section reveal">
+  <div class="cat-header">
+    <div>
+      <div class="section-label">Collection 04</div>
+      <h2 class="cat-title">Scene<br><em>Packs</em></h2>
+    </div>
+    <div class="cat-right">
+      <p class="cat-desc">Immersive scene backgrounds spanning ancient ruins, sci-fi cities, fantasy landscapes, and beyond — ready for games, films, and creative projects.</p>
+    </div>
+  </div>
+  <div class="grid-2x2 reveal delay-1">
+    <div class="product-card">
+      <div class="card-img"><div class="card-img-inner pattern-a"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Ancient & Medieval</div></div></div>
+      <div class="card-body"><div class="card-tag">Ancient & Medieval Series</div><div class="card-title">Ancient & Medieval Scene Pack</div><div class="card-desc">Ancient Rome, medieval castles, and historical ruins for epic storytelling.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="card-img"><div class="card-img-inner pattern-b"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Sci-Fi & Futuristic</div></div></div>
+      <div class="card-body"><div class="card-tag">Sci-Fi Series</div><div class="card-title">Sci-Fi Scene Pack</div><div class="card-desc">Futuristic cities, space stations, neon streets, and science labs.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="card-img"><div class="card-img-inner pattern-c"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Forest & Nature</div></div></div>
+      <div class="card-body"><div class="card-tag">Nature Series</div><div class="card-title">Forest & Nature Scene Pack</div><div class="card-desc">Mysterious forests, mountain landscapes, deserts, and natural wonders.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="card-img"><div class="card-img-inner pattern-a"></div><div class="card-img-overlay"></div><div class="card-coming-overlay"><div class="coming-diamond"><div class="coming-diamond-inner"></div></div><div class="coming-label">Coming Soon</div><div class="coming-sub">Horror & Dark</div></div></div>
+      <div class="card-body"><div class="card-tag">Horror Series</div><div class="card-title">Horror & Dark Scene Pack</div><div class="card-desc">Haunted forests, abandoned buildings, and atmospheric dark environments.</div><div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div></div>
+    </div>
+  </div>
+  <div class="view-all-wrap reveal delay-2">
+    <a href="scene.html" class="view-all">View All Scene Packs</a>
   </div>
 </div>
 
