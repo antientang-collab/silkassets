@@ -53,7 +53,7 @@ body {
 
 /* ── HOME SCREEN (Hero + Features + Trust 合并) ── */
 .home-screen {
-  padding: 110px 80px 72px;
+  padding: 140px 80px 72px;
   display: flex; flex-direction: column; gap: 56px;
 }
 
@@ -384,37 +384,40 @@ body {
   /* Nav */
   .nav {
     padding: 14px 20px;
-    flex-direction: column; align-items: flex-start; gap: 12px;
+    flex-direction: column; align-items: flex-start; gap: 10px;
   }
+  /* 手机导航：四个项目放一行，字更小 */
   .nav-links {
-    display: flex; flex-wrap: wrap; gap: 12px 20px; width: 100%;
+    display: flex; flex-wrap: nowrap; gap: 0; width: 100%;
+    justify-content: space-between;
   }
-  .nav-links a { font-size: 10px; letter-spacing: 0.18em; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.12em; }
 
-  /* Home screen */
-  .home-screen { padding: 90px 20px 48px; gap: 36px; }
+  /* Home screen — 顶部padding加大避免被导航挡住 */
+  .home-screen { padding: 130px 20px 48px; gap: 32px; }
   .br-desktop { display: none; }
 
-  /* Features */
+  /* Features — 减少每个卡片高度 */
   .features-grid { grid-template-columns: 1fr; }
-  .feature-card { padding: 32px 24px; border-bottom: 1px solid var(--mist2); }
+  .feature-card { padding: 24px 20px; border-bottom: 1px solid var(--mist2); }
   .feature-card:last-child { border-bottom: none; }
+  .feature-icon-line { margin-bottom: 14px; }
 
   /* Trust */
-  .trust-inner { padding: 32px 24px; }
+  .trust-inner { padding: 24px 20px; }
 
   /* Collection */
-  .collection-section { padding: 56px 20px; }
+  .collection-section { padding: 48px 20px; }
 
   /* Products — 1 col on mobile */
-  .products-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; gap: 10px; }
   .product-card { transform: none; }
   .product-img-placeholder { aspect-ratio: 16/9; }
 
   /* Contact */
-  .contact-section { padding: 56px 20px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 44px; }
-  .license-info { grid-template-columns: 1fr; gap: 20px; }
+  .contact-section { padding: 48px 20px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .license-info { grid-template-columns: repeat(3,1fr); gap: 16px; }
 
   /* Coming soon page */
   .coming-soon-page { padding: 100px 24px 60px; }
