@@ -53,7 +53,7 @@ body {
 
 /* ── HOME SCREEN (Hero + Features + Trust 合并) ── */
 .home-screen {
-  padding: 100px 80px 72px;
+  padding: 72px 80px 72px;
   display: flex; flex-direction: column; gap: 56px;
 }
 
@@ -206,7 +206,7 @@ body {
 
 .product-img-wrap { position: relative; }
 .product-img-placeholder {
-  width: 100%; aspect-ratio: 4/3;
+  width: 100%; aspect-ratio: 16/9;
   display: flex; align-items: center; justify-content: center;
   background: var(--moss);
   border-bottom: 1px solid var(--mist2);
@@ -294,7 +294,7 @@ body {
 }
 .contact-right blockquote {
   font-family: 'Cormorant Garamond', serif; font-style: italic;
-  font-size: clamp(20px, 2.5vw, 26px);
+  font-size: clamp(16px, 1.8vw, 20px);
   color: var(--cream); opacity: 0.35; line-height: 1.55;
 }
 .license-info {
