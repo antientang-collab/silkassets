@@ -31,36 +31,21 @@
 
     <div class="products-grid">
 
-      <!-- ══ 示例产品卡片（有图的版本）══
-           上架产品时复制这个卡片，替换图片链接、标题、描述、价格和购买链接
-           图片放到 GitHub 仓库的 img/ 文件夹里，路径写 img/你的图片名.jpg
+      <!-- ══ 产品卡片模板（等图片准备好后使用）══
+           上架时：把 coming 改成 has-product，把占位区换成轮播图，填入价格和购买链接
       -->
-      <div class="product-card has-product">
-        <!-- 轮播图 -->
-        <div class="carousel" data-index="0">
-          <div class="carousel-track">
-            <!-- 替换 src 为你的图片路径，可以放3到5张 -->
-            <img src="img/preview1.jpg" alt="Preview 1" />
-            <img src="img/preview2.jpg" alt="Preview 2" />
-            <img src="img/preview3.jpg" alt="Preview 3" />
+      <div class="product-card coming">
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 40L20 16L32 28L38 20L44 40H8Z" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><circle cx="14" cy="14" r="5" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/></svg>
           </div>
-          <button class="carousel-btn prev" aria-label="Previous">&#8592;</button>
-          <button class="carousel-btn next" aria-label="Next">&#8594;</button>
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
+          <span class="badge-coming">Coming Soon</span>
         </div>
         <div class="product-info">
           <p class="product-format">PNG · SVG · Transparent Background</p>
           <h3 class="product-name">Chinese Ink Wash Illustration Pack</h3>
-          <p class="product-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes. 30 files included.</p>
-          <div class="product-footer">
-            <span class="product-price">$19.00</span>
-            <!-- 替换 href 为你的 Creem 购买链接 -->
-            <a href="#" class="btn-buy">Buy Now</a>
-          </div>
+          <p class="product-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes.</p>
+          <span class="btn-soon">Coming Soon</span>
         </div>
       </div>
 

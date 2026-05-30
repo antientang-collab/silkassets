@@ -27,7 +27,7 @@ body {
 .nav {
   position: fixed; top:0; left:0; right:0; z-index:100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 80px;
+  padding: 32px 80px;
   background: linear-gradient(to bottom, rgba(13,26,18,0.97) 70%, transparent);
   backdrop-filter: blur(4px);
 }
@@ -145,8 +145,7 @@ body {
 
 /* Trust Banner */
 .trust-inner {
-  border: 1px solid var(--gold-dim);
-  background: rgba(201,168,76,0.04);
+  background: rgba(201,168,76,0.05);
   padding: 32px 64px; text-align: center;
   border-radius: 4px;
   max-width: 800px; margin: 0 auto;
@@ -211,10 +210,12 @@ body {
 
 .product-img-wrap { position: relative; }
 .product-img-placeholder {
-  width: 100%; aspect-ratio: 16/9;
+  width: 100%;
+  aspect-ratio: 16/9;
   display: flex; align-items: center; justify-content: center;
   background: var(--moss);
   border-bottom: 1px solid var(--mist2);
+  overflow: hidden;
 }
 .badge-coming {
   position: absolute; top: 12px; right: 12px;
@@ -381,20 +382,29 @@ body {
 ════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* Nav */
+  /* Nav — Logo靠左，导航靠右同行稍低 */
   .nav {
     padding: 14px 20px;
-    flex-direction: column; align-items: flex-start; gap: 10px;
-  }
-  /* 手机导航：四个项目放一行，字更小 */
-  .nav-links {
-    display: flex; flex-wrap: nowrap; gap: 0; width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 0;
   }
-  .nav-links a { font-size: 9px; letter-spacing: 0.12em; }
+  .nav-logo {
+    font-size: 13px; letter-spacing: 0.2em;
+  }
+  .nav-logo img { width: 30px; height: 30px; }
+  .nav-links {
+    display: flex; flex-wrap: wrap;
+    gap: 8px 14px;
+    justify-content: flex-end;
+    max-width: 55%;
+    margin-top: 6px;
+  }
+  .nav-links a { font-size: 8px; letter-spacing: 0.1em; }
 
   /* Home screen — 顶部padding加大避免被导航挡住 */
-  .home-screen { padding: 130px 20px 48px; gap: 32px; }
+  .home-screen { padding: 150px 20px 48px; gap: 32px; }
   .br-desktop { display: none; }
 
   /* Features — 减少每个卡片高度 */
@@ -449,7 +459,7 @@ body {
 }
 .carousel-track img {
   min-width: 100%; width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
 }
