@@ -680,3 +680,57 @@ footer {
     gap: 48px;
   }
 }
+
+/* ══════════════════════════════════════════════
+   CONTACT — 重新设计
+══════════════════════════════════════════════ */
+.contact-divider {
+  width: 48px; height: 1px;
+  background: var(--gold); opacity: 0.4;
+  margin: 28px 0;
+}
+.contact-right blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--cream); opacity: 0.55;
+  line-height: 1.5; margin-bottom: 40px;
+}
+
+/* 三列授权信息 */
+.license-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.license-item { display: flex; flex-direction: column; gap: 8px; }
+.license-bar {
+  width: 24px; height: 2px;
+  background: var(--gold); opacity: 0.5;
+  margin-bottom: 4px;
+}
+.license-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px; font-weight: 600;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.7;
+}
+.license-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; color: var(--cream); opacity: 0.45;
+  line-height: 1.5;
+}
+
+/* 社媒卡片 hover 金色左边框 */
+.social-card {
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.social-card:hover {
+  border-left-color: var(--gold);
+  background: rgba(201,168,76,0.05);
+}
+
+@media (max-width: 768px) {
+  .license-info { grid-template-columns: 1fr; gap: 24px; }
+}
