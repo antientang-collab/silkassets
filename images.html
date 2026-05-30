@@ -22,8 +22,7 @@
     </ul>
   </nav>
 
-  <!-- COLLECTION -->
-  <section class="collection-section" style="padding-top: 140px;">
+  <section class="collection-section" style="padding-top:130px;">
     <div class="collection-header">
       <p class="collection-label">Collection 02</p>
       <h2 class="collection-title">Design <em>Assets</em></h2>
@@ -32,22 +31,45 @@
 
     <div class="products-grid">
 
-      <div class="product-card coming">
-        <div class="product-img-wrap">
-          <div class="product-img-placeholder">🖌️</div>
-          <span class="badge-coming">Coming Soon</span>
+      <!-- ══ 示例产品卡片（有图的版本）══
+           上架产品时复制这个卡片，替换图片链接、标题、描述、价格和购买链接
+           图片放到 GitHub 仓库的 img/ 文件夹里，路径写 img/你的图片名.jpg
+      -->
+      <div class="product-card has-product">
+        <!-- 轮播图 -->
+        <div class="carousel" data-index="0">
+          <div class="carousel-track">
+            <!-- 替换 src 为你的图片路径，可以放3到5张 -->
+            <img src="img/preview1.jpg" alt="Preview 1" />
+            <img src="img/preview2.jpg" alt="Preview 2" />
+            <img src="img/preview3.jpg" alt="Preview 3" />
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous">&#8592;</button>
+          <button class="carousel-btn next" aria-label="Next">&#8594;</button>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
         </div>
         <div class="product-info">
           <p class="product-format">PNG · SVG · Transparent Background</p>
           <h3 class="product-name">Chinese Ink Wash Illustration Pack</h3>
-          <p class="product-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes.</p>
-          <span class="btn-soon">Coming Soon</span>
+          <p class="product-desc">Traditional ink wash style illustrations — mountains, flowers, birds, and landscapes. 30 files included.</p>
+          <div class="product-footer">
+            <span class="product-price">$19.00</span>
+            <!-- 替换 href 为你的 Creem 购买链接 -->
+            <a href="#" class="btn-buy">Buy Now</a>
+          </div>
         </div>
       </div>
 
+      <!-- ══ Coming Soon 卡片（没有产品时用这个）══ -->
       <div class="product-card coming">
         <div class="product-img-wrap">
-          <div class="product-img-placeholder">🔷</div>
+          <div class="product-img-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="14" height="14" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><rect x="26" y="8" width="14" height="14" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><rect x="8" y="26" width="14" height="14" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><rect x="26" y="26" width="14" height="14" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/></svg>
+          </div>
           <span class="badge-coming">Coming Soon</span>
         </div>
         <div class="product-info">
@@ -60,7 +82,9 @@
 
       <div class="product-card coming">
         <div class="product-img-wrap">
-          <div class="product-img-placeholder">🎋</div>
+          <div class="product-img-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M14 8 Q24 4 34 8 Q38 24 24 44 Q10 24 14 8Z" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><line x1="24" y1="12" x2="24" y2="36" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/></svg>
+          </div>
           <span class="badge-coming">Coming Soon</span>
         </div>
         <div class="product-info">
@@ -73,7 +97,9 @@
 
       <div class="product-card coming">
         <div class="product-img-wrap">
-          <div class="product-img-placeholder">🏮</div>
+          <div class="product-img-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="14" ry="10" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.4"/><line x1="24" y1="30" x2="24" y2="42" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/><line x1="16" y1="42" x2="32" y2="42" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/></svg>
+          </div>
           <span class="badge-coming">Coming Soon</span>
         </div>
         <div class="product-info">
@@ -87,12 +113,39 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <a class="footer-logo" href="index.html">SilkAssets</a>
-    <p>Premium AI Media Assets for Creators</p>
-    <p>© 2026 SilkAssets · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · hello@silkassets.top</p>
+    <p class="footer-tagline">Premium AI Media Assets for Creators</p>
+    <p class="footer-copy">© 2026 SilkAssets · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · hello@silkassets.top</p>
   </footer>
+
+  <!-- 轮播图 JS -->
+  <script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const imgs = track.querySelectorAll('img');
+      const dots = carousel.querySelectorAll('.dot');
+      let index = 0;
+      let startX = 0;
+
+      function goTo(n) {
+        index = (n + imgs.length) % imgs.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+
+      carousel.querySelector('.prev').addEventListener('click', () => goTo(index - 1));
+      carousel.querySelector('.next').addEventListener('click', () => goTo(index + 1));
+      dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+      // 手机滑动
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? index + 1 : index - 1);
+      });
+    });
+  </script>
 
 </body>
 </html>

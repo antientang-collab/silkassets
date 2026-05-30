@@ -429,3 +429,70 @@ body {
   /* Policy */
   .policy-wrap { padding: 100px 24px 60px; }
 }
+
+/* ══════════════════════════════════════════════
+   CAROUSEL 轮播图
+══════════════════════════════════════════════ */
+.product-card.has-product { cursor: default; }
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  background: var(--moss);
+  border-bottom: 1px solid var(--mist2);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-track img {
+  min-width: 100%; width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+/* 左右箭头 */
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(13,26,18,0.75);
+  border: 1px solid var(--gold-dim);
+  color: var(--gold); font-size: 14px;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.2s, border-color 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover { background: rgba(13,26,18,0.95); border-color: var(--gold); }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* 圆点 */
+.carousel-dots {
+  position: absolute; bottom: 10px; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 6px;
+}
+.dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--cream); opacity: 0.3; cursor: pointer;
+  transition: opacity 0.3s, background 0.3s;
+}
+.dot.active { background: var(--gold); opacity: 1; }
+
+/* 价格 + 购买按钮 */
+.product-footer {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-top: 4px;
+}
+.product-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 300; color: var(--gold-light);
+}
+.btn-buy {
+  font-family: 'Cinzel', serif; font-size: 8px; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ink); background: var(--gold);
+  padding: 10px 20px; text-decoration: none;
+  transition: background 0.3s; display: inline-block; white-space: nowrap;
+}
+.btn-buy:hover { background: var(--gold-light); }
