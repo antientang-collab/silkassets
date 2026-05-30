@@ -382,39 +382,57 @@ body {
 ════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* Nav — Logo靠左，导航靠右同行稍低 */
+  /* Nav — Logo靠左，导航靠右，真正同一行 */
   .nav {
-    padding: 14px 20px;
+    padding: 12px 16px;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 0;
   }
   .nav-logo {
-    font-size: 13px; letter-spacing: 0.2em;
+    font-size: 12px; letter-spacing: 0.18em;
   }
-  .nav-logo img { width: 30px; height: 30px; }
+  .nav-logo img { width: 28px; height: 28px; }
   .nav-links {
-    display: flex; flex-wrap: wrap;
-    gap: 8px 14px;
+    display: flex; flex-wrap: nowrap;
+    gap: 12px;
     justify-content: flex-end;
-    max-width: 55%;
-    margin-top: 6px;
+    align-items: center;
   }
   .nav-links a { font-size: 8px; letter-spacing: 0.1em; }
 
-  /* Home screen — 顶部padding加大避免被导航挡住 */
-  .home-screen { padding: 150px 20px 48px; gap: 32px; }
+  /* Home screen */
+  .home-screen { padding: 120px 20px 40px; gap: 28px; }
   .br-desktop { display: none; }
 
-  /* Features — 减少每个卡片高度 */
-  .features-grid { grid-template-columns: 1fr; }
-  .feature-card { padding: 24px 20px; border-bottom: 1px solid var(--mist2); }
-  .feature-card:last-child { border-bottom: none; }
-  .feature-icon-line { margin-bottom: 14px; }
+  /* Features — 三栏横排，只显示图标+标题 */
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--mist2);
+    border-bottom: 1px solid var(--mist2);
+  }
+  .feature-card {
+    padding: 20px 12px;
+    border-right: 1px solid var(--mist2);
+    border-bottom: none;
+    text-align: center;
+  }
+  .feature-card:last-child { border-right: none; }
+  .feature-icon-line { margin-bottom: 10px; }
+  .feature-icon-line svg { width: 22px; height: 22px; }
+  .feature-title { font-size: 13px; margin-bottom: 0; }
+  /* 手机端隐藏描述文字 */
+  .feature-tag { display: none; }
+  .feature-desc { display: none; }
 
-  /* Trust */
-  .trust-inner { padding: 24px 20px; }
+  /* Trust — 去掉边框 */
+  .trust-inner {
+    border: none;
+    background: rgba(201,168,76,0.05);
+    padding: 24px 16px;
+  }
 
   /* Collection */
   .collection-section { padding: 48px 20px; }
