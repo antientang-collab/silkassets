@@ -496,3 +496,38 @@ body {
   transition: background 0.3s; display: inline-block; white-space: nowrap;
 }
 .btn-buy:hover { background: var(--gold-light); }
+
+/* ══════════════════════════════════════════════
+   超宽屏适配 — 所有内容最大宽度限制
+══════════════════════════════════════════════ */
+.home-screen,
+.collection-section,
+.contact-section {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Nav内容也限制宽度 */
+.nav {
+  max-width: 100%;
+  padding-left: max(80px, calc((100vw - 1400px) / 2 + 80px));
+  padding-right: max(80px, calc((100vw - 1400px) / 2 + 80px));
+}
+
+/* Hero标题居中，不要左偏 */
+.hero-compact {
+  width: 100%;
+}
+
+/* Feature卡片内容不要过于分散 */
+.feature-card {
+  max-width: 100%;
+}
+
+/* Trust banner也限制宽度 */
+.trust-inner {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
