@@ -1,120 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scene Packs — SilkAssets</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.page-header { padding: 160px 80px 80px; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
-.page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 84px); font-weight: 300; color: var(--cream); line-height: 1.05; }
-.page-title em { font-style: italic; color: var(--gold-light); }
-.page-desc { font-size: 18px; font-weight: 300; color: var(--cream); opacity: 0.55; line-height: 1.75; max-width: 440px; align-self: end; }
-.grid-wrap { padding: 0 80px 80px; max-width: 1400px; margin: 0 auto; }
-.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scene Packs — SilkAssets</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
-  <a href="index.html" class="nav-logo"><img src="logo.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;margin-right:10px;vertical-align:middle;border:1px solid rgba(201,168,76,0.3);">SilkAssets</a>
-  <ul class="nav-links">
-    <li><a href="video.html">Video</a></li>
-    <li><a href="images.html">Images</a></li>
-    <li><a href="sound.html">Sound Effects</a></li>
-    <li><a href="scene.html" class="active">Scene Packs</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="logo.jpg" alt="SilkAssets" />SilkAssets
+    </a>
+    <ul class="nav-links">
+      <li><a href="video.html">Video</a></li>
+      <li><a href="images.html">Images</a></li>
+      <li><a href="sound.html">Sound Effects</a></li>
+      <li><a href="scene.html">Scene Packs</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="page-header">
-  <div class="reveal">
-    <div class="section-label">Collection 04</div>
-    <h1 class="page-title">Scene<br><em>Packs</em></h1>
-  </div>
-  <p class="page-desc reveal delay-1">Immersive scene backgrounds spanning ancient ruins, sci-fi cities, fantasy landscapes, and beyond — ready for games, films, and creative projects.</p>
-</div>
-
-<div class="motif-strip"><span class="motif-text">古今中外 · Worlds Beyond · 無限場景</span></div>
-
-<div class="grid-wrap">
-  <div class="product-grid">
-
-    <div class="product-card reveal">
-      <div class="card-img">
-        <div class="card-img-inner pattern-a"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Ancient Rome & Medieval</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Ancient & Medieval Series</div>
-        <div class="card-title">Ancient & Medieval Scene Pack</div>
-        <div class="card-desc">Ancient Rome, medieval castles, and historical ruins for epic storytelling.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
+  <!-- COMING SOON -->
+  <section class="coming-soon-page">
+    <div class="coming-soon-inner">
+      <p class="collection-label">Collection 04</p>
+      <h1>Scene <em>Packs</em></h1>
+      <div class="divider-text">古今中外 · Worlds Beyond · 無限場景</div>
+      <div class="coming-soon-icon">🏯</div>
+      <h2 class="coming-soon-title">敬请期待</h2>
+      <p class="coming-soon-sub">Coming Soon — We're working on something beautiful.</p>
+      <p class="coming-soon-desc">
+        Immersive scene backgrounds spanning ancient ruins, sci-fi cities,
+        fantasy landscapes, and beyond — ready for games, films, and creative projects.
+      </p>
+      <a href="index.html" class="btn-back">← Back to Home</a>
     </div>
+  </section>
 
-    <div class="product-card reveal delay-1">
-      <div class="card-img">
-        <div class="card-img-inner pattern-b"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Sci-Fi & Futuristic</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Sci-Fi Series</div>
-        <div class="card-title">Sci-Fi Scene Pack</div>
-        <div class="card-desc">Futuristic cities, space stations, neon streets, and science labs.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
-    </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="footer-logo" href="index.html">SilkAssets</a>
+    <p>From the Silk Road to Your Screen</p>
+    <p>© 2026 SilkAssets · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · hello@silkassets.top</p>
+  </footer>
 
-    <div class="product-card reveal delay-2">
-      <div class="card-img">
-        <div class="card-img-inner pattern-c"></div>
-        <div class="card-img-overlay"></div>
-        <div class="card-coming-overlay">
-          <div class="coming-diamond"><div class="coming-diamond-inner"></div></div>
-          <div class="coming-label">Coming Soon</div>
-          <div class="coming-sub">Forest & Nature</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">Nature Series</div>
-        <div class="card-title">Forest & Nature Scene Pack</div>
-        <div class="card-desc">Mysterious forests, mountain landscapes, deserts, and natural wonders.</div>
-        <div class="card-footer"><span class="card-price" style="opacity:0.4;">Coming Soon</span></div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<footer>
-  <a href="index.html" class="footer-logo">SilkAssets</a>
-  <span class="footer-tagline">From the Silk Road to Your Screen</span>
-  <span class="footer-copy">© 2026 SilkAssets · <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:0.6;">Privacy</a> · <a href="terms.html" style="color:inherit;text-decoration:none;opacity:0.6;">Terms</a> · hello@silkassets.top</span>
-</footer>
-
-<script>
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
-function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);}
-animRing();
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
-</script>
 </body>
 </html>
