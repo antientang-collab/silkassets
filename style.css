@@ -420,8 +420,6 @@ body {
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    border-top: 1px solid var(--mist2);
-    border-bottom: 1px solid var(--mist2);
   }
   .feature-card {
     padding: 20px 12px;
