@@ -260,31 +260,34 @@ body {
 }
 .contact-left h2 em { font-style: italic; color: var(--gold); }
 .social-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 .social-card {
   border: 1px solid var(--mist2);
-  border-left: 2px solid transparent;
-  padding: 20px 24px;
+  border-radius: 6px;
+  padding: 18px 20px;
   text-decoration: none;
-  transition: border-color 0.3s, background 0.3s, border-left-color 0.3s;
-  display: block;
-  border-radius: 4px;
+  transition: background 0.3s, border-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .social-card:hover {
-  border-left-color: var(--gold);
   background: rgba(201,168,76,0.05);
   border-color: var(--gold-dim);
 }
-.social-icon { margin-bottom: 10px; }
+.social-icon { flex-shrink: 0; display: flex; align-items: center; }
+.social-icon svg { width: 16px; height: 16px; }
+.social-text { display: flex; flex-direction: column; gap: 4px; }
 .social-name {
-  font-family: 'Cinzel', serif; font-size: 8px; font-weight: 600;
+  font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600;
   letter-spacing: 0.35em; text-transform: uppercase;
-  color: var(--cream); opacity: 0.4; margin-bottom: 6px;
+  color: var(--cream); opacity: 0.35; margin: 0;
 }
 .social-handle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; color: var(--gold); opacity: 0.85;
+  font-size: 16px; color: var(--gold); opacity: 0.85; margin: 0;
 }
 
 /* Contact Right */
