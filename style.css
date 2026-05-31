@@ -538,14 +538,15 @@ body {
   margin-right: auto;
 }
 
-/* Nav内容也限制宽度 */
-.nav {
-  max-width: 100%;
-  padding-left: max(80px, calc((100vw - 1400px) / 2 + 80px));
-  padding-right: max(80px, calc((100vw - 1400px) / 2 + 80px));
+/* ══ 超宽屏适配 ══ */
+@media (min-width: 1400px) {
+  .nav {
+    padding-left: calc((100vw - 1400px) / 2 + 80px);
+    padding-right: calc((100vw - 1400px) / 2 + 80px);
+  }
 }
 
-/* Hero标题居中，不要左偏 */
+/* Hero标题居中 */
 .hero-compact {
   width: 100%;
   text-align: center;
@@ -553,14 +554,14 @@ body {
   margin: 0 auto;
 }
 
-/* Feature卡片内容不要过于分散 */
+/* Feature卡片 */
 .feature-card {
   max-width: 100%;
 }
 
-/* Trust banner也限制宽度 */
+/* Trust banner宽度限制 */
 .trust-inner {
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
