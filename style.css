@@ -423,7 +423,7 @@ body {
   }
   .feature-card {
     padding: 20px 12px;
-    border-right: 1px solid var(--mist2);
+    border-right: none;
     border-bottom: none;
     text-align: center;
   }
