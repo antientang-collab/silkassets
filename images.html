@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Design Assets — SilkAssets</title>
-  <!-- 本地字体预加载 -->
   <link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/cinzel-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/crimson-pro-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -35,9 +34,41 @@
 
     <div class="products-grid">
 
-      <!-- ══ 产品卡片模板（等图片准备好后使用）══
-           上架时：把 coming 改成 has-product，把占位区换成轮播图，填入价格和购买链接
-      -->
+      <!-- 中式末日壁纸包 — 已上架 -->
+      <div class="product-card has-product">
+        <div class="product-img-wrap">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Cover.jpg.webp" alt="Chinese Apocalypse Cover" loading="lazy" />
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Preview_01.webp" alt="Chinese Apocalypse Preview 1" loading="lazy" />
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Preview_02.webp" alt="Chinese Apocalypse Preview 2" loading="lazy" />
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Preview_03.webp" alt="Chinese Apocalypse Preview 3" loading="lazy" />
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Preview_04.webp" alt="Chinese Apocalypse Preview 4" loading="lazy" />
+              <img src="images/chinese-apocalypse/SilkAssets_ChineseApocalypse_Preview_05.webp" alt="Chinese Apocalypse Preview 5" loading="lazy" />
+            </div>
+            <button class="prev">&#8249;</button>
+            <button class="next">&#8250;</button>
+            <div class="dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-format">JPG · PNG · 800+ Images · 16:9 &amp; 9:16</p>
+          <h3 class="product-name">Chinese Apocalypse Wallpaper Pack</h3>
+          <p class="product-desc">800+ cinematic AI wallpapers — ancient palaces in ruins, fractured Great Walls, flooded dynasties, volcanic temples.</p>
+          <div class="product-bottom">
+            <span class="product-price">$4.99</span>
+            <a href="https://www.creem.io/payment/prod_75eNijMopjVyzA9Y2n995q" class="btn-buy" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
       <div class="product-card coming">
         <div class="product-img-wrap">
           <div class="product-img-placeholder">
@@ -53,7 +84,6 @@
         </div>
       </div>
 
-      <!-- ══ Coming Soon 卡片（没有产品时用这个）══ -->
       <div class="product-card coming">
         <div class="product-img-wrap">
           <div class="product-img-placeholder">
@@ -108,26 +138,20 @@
     <p class="footer-copy">© 2026 SilkAssets · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · hello@silkassets.top</p>
   </footer>
 
-  <!-- 轮播图 JS -->
   <script>
     document.querySelectorAll('.carousel').forEach(carousel => {
       const track = carousel.querySelector('.carousel-track');
       const imgs = track.querySelectorAll('img');
       const dots = carousel.querySelectorAll('.dot');
-      let index = 0;
-      let startX = 0;
-
+      let index = 0, startX = 0;
       function goTo(n) {
         index = (n + imgs.length) % imgs.length;
         track.style.transform = `translateX(-${index * 100}%)`;
         dots.forEach((d, i) => d.classList.toggle('active', i === index));
       }
-
       carousel.querySelector('.prev').addEventListener('click', () => goTo(index - 1));
       carousel.querySelector('.next').addEventListener('click', () => goTo(index + 1));
       dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-
-      // 手机滑动
       track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
       track.addEventListener('touchend', e => {
         const diff = startX - e.changedTouches[0].clientX;
@@ -135,6 +159,5 @@
       });
     });
   </script>
-
 </body>
 </html>
