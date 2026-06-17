@@ -289,6 +289,26 @@ p{ margin:0 0 1rem; }
 }
 
 </style>
+<script>
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.addEventListener('load', function() {
+  const hash = window.location.hash;
+  if (hash === '#catalog') {
+    const el = document.getElementById('catalog');
+    if (el) {
+      setTimeout(() => {
+        const offset = 80;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({top: top, behavior: 'auto'});
+      }, 50);
+    }
+  } else {
+    window.scrollTo({top: 0, behavior: 'auto'});
+  }
+});
+</script>
 </head>
 <body id="top">
 
