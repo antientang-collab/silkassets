@@ -302,6 +302,8 @@ p{ margin:0 0 1rem; }
   .nav a{ font-size:1rem; color:var(--ink); }
   .nav .nav-cta{ align-self:flex-end; margin-top:.4rem; }
 }
+
+.card[onclick]:hover{ box-shadow:0 4px 20px rgba(0,0,0,0.12); transform:translateY(-2px); transition:all .2s; }
 </style>
 <script>
 if ('scrollRestoration' in history) {
@@ -373,16 +375,15 @@ window.addEventListener('load', function() {
   <div class="wrap">
     <div class="cards">
 
-      <article class="card">
+      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_11r4XeNHBklQIo6kw5NVzx'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_TP01_Cover.webp" alt="Professional Tech Pack Template" loading="lazy"></div>
         <div class="card-sku"><span>TP-01</span><span>TEMPLATE</span></div>
         <h3>Professional Tech Pack Template</h3>
-        <p class="card-desc">The exact 8-page format used to brief factories — style summary, BOM, construction, measurements, colorways, grading, trims, labels. Includes a filled sample and a usage guide.</p>
+        <p class="card-desc">The exact 11-page format used to brief factories — style summary, BOM, construction, measurements, colorways, grading, trims, labels. Includes a filled sample and a usage guide.</p>
         <div class="tags"><span class="tag">PPTX</span><span class="tag">XLSX</span><span class="tag">PDF</span></div>
         <div class="card-foot">
           <span class="price">$39</span>
-          <!-- TODO: paste Creem link for TP-01 -->
-          <a class="btn btn-primary" href="#">Buy — $39</a>
+          <a class="btn btn-primary" href="https://www.creem.io/payment/prod_11r4XeNHBklQIo6kw5NVzx">Buy — $39</a>
         </div>
       </article>
 
