@@ -296,11 +296,15 @@ p{ margin:0 0 1rem; }
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html"><span class="mark"></span>SilkAssets</a>
-    <nav class="nav">
+    <nav class="nav" id="nav-menu">
       <a class="nav-link" href="products.html">Products</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-cta" href="index.html#checklist">Free checklist</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-cta" href="products.html">Browse catalog</a>
     </nav>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -436,7 +440,7 @@ p{ margin:0 0 1rem; }
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="products.html">Products</a>
-        <a href="index.html#about">About</a>
+        <a href="about.html">About</a>
         <a href="index.html#checklist">Free checklist</a>
       </div>
       <div class="footer-col">
@@ -454,5 +458,10 @@ p{ margin:0 0 1rem; }
   </div>
 </footer>
 
+<script>
+const burger = document.getElementById('nav-burger');
+const nav = document.getElementById('nav-menu');
+burger.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
 </body>
 </html>
