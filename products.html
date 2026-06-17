@@ -475,7 +475,11 @@ document.querySelectorAll('a[href="products.html#catalog"]').forEach(a => {
   a.addEventListener('click', function(e) {
     e.preventDefault();
     const el = document.getElementById('catalog');
-    if (el) el.scrollIntoView({behavior: 'smooth'});
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({top: top, behavior: 'smooth'});
+    }
     nav.classList.remove('open');
   });
 });
