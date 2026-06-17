@@ -462,6 +462,23 @@ p{ margin:0 0 1rem; }
 const burger = document.getElementById('nav-burger');
 const nav = document.getElementById('nav-menu');
 burger.addEventListener('click', () => nav.classList.toggle('open'));
+
+// 处理Products和BROWSE CATALOG在当前页面的跳转
+document.querySelectorAll('a[href="products.html#top"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    nav.classList.remove('open');
+  });
+});
+document.querySelectorAll('a[href="products.html#catalog"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const el = document.getElementById('catalog');
+    if (el) el.scrollIntoView({behavior: 'smooth'});
+    nav.classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>
