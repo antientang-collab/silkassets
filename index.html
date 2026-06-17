@@ -27,7 +27,7 @@
   --brass-deep: #8c6716;
   --brass-tint: #f0e7cf;
 
-  --maxw: 1140px;
+  --maxw: 1280px;
   --pad: clamp(20px, 5vw, 64px);
 
   --f-display: "Archivo", system-ui, sans-serif;
@@ -155,9 +155,9 @@ p{ margin:0 0 1rem; }
 
 /* ---------- trust strip ---------- */
 .trust{ border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); background:rgba(255,255,255,.45); }
-.trust .wrap{ display:flex; flex-wrap:wrap; gap:.4rem 0; justify-content:space-between; padding-top:1rem; padding-bottom:1rem; }
+.trust .wrap{ display:flex; flex-wrap:nowrap; gap:0; justify-content:space-between; padding-top:.8rem; padding-bottom:.8rem; overflow:hidden; }
 .trust span{
-  font-family:var(--f-mono); font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+  font-family:var(--f-mono); font-size:.65rem; letter-spacing:.08em; text-transform:uppercase;
   color:var(--ink-soft); display:inline-flex; align-items:center; gap:.7rem;
 }
 .trust span::before{ content:""; width:6px; height:6px; background:var(--brass); transform:rotate(45deg); display:inline-block; }
