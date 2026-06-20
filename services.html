@@ -302,6 +302,9 @@ p{ margin:0 0 1rem; }
 <style>
 .nav-active{ color:var(--ink) !important; font-weight:700; }
 .service-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,36px); margin-top:2.4rem; align-items:stretch; }
+.service-grid-2{ grid-template-columns:repeat(2,1fr); max-width:760px; }
+.service-divider{ margin-top:clamp(36px,5vw,52px); margin-bottom:clamp(20px,3vw,28px); padding-top:clamp(28px,4vw,40px); border-top:1px solid var(--line-soft); }
+.service-divider p{ color:var(--ink-soft); font-size:.95rem; max-width:42em; margin-top:.6rem; margin-bottom:0; }
 .service-card{ background:var(--card); border:1px solid var(--line-soft); border-radius:6px; padding:clamp(24px,4vw,40px); display:flex; flex-direction:column; gap:1rem; }
 .service-card h3{ font-family:var(--f-display); font-size:1.25rem; font-weight:700; color:var(--ink); margin:0; }
 .service-card p{ font-size:.95rem; color:var(--ink-soft); line-height:1.7; margin:0; flex:1; }
@@ -352,39 +355,70 @@ p{ margin:0 0 1rem; }
 <!-- SERVICES GRID -->
 <section class="section" style="padding-top:1.2rem;">
   <div class="wrap">
+
     <div class="service-grid">
 
-      <!-- Sample Development -->
+      <!-- Pattern Development -->
       <div class="service-card">
         <div>
           <span class="service-tag">01 · Development</span>
-          <h3>Sample Development</h3>
+          <h3>Pattern Development</h3>
         </div>
-        <p>Have a design? We turn it into a factory-ready sample. We handle pattern making, Tech Pack documentation and sample production — all managed from China, with direct factory access.</p>
+        <p>Have a design but no production-ready pattern? We build it from scratch — fully graded across your size range, ready to hand straight to any factory. Pattern files only, no sample or sourcing involved — for brands that already have production sorted and just need the technical groundwork done right.</p>
         <a href="mailto:hello@silkassets.top" class="service-cta">Get in touch →</a>
       </div>
 
-      <!-- Full Production -->
+      <!-- Pattern + Sample Development -->
       <div class="service-card">
         <div>
-          <span class="service-tag">02 · Production</span>
-          <h3>Full Production</h3>
+          <span class="service-tag">02 · Sample</span>
+          <h3>Pattern + Sample Development</h3>
         </div>
-        <p>Ready to manufacture? We manage the entire production process — from finalising specs and sourcing materials, to overseeing production and arranging delivery. No middleman, factory direct.</p>
+        <p>Need to see and feel it before committing? We take your design from pattern through to a finished, factory-made sample — sourcing the fabric and trims in China. To save time, you can review the sample remotely via photos and video call, or have it shipped to you for a hands-on look before approving.</p>
         <a href="mailto:hello@silkassets.top" class="service-cta">Get in touch →</a>
       </div>
 
-      <!-- China Sourcing -->
+      <!-- Full Production Management -->
       <div class="service-card">
         <div>
-          <span class="service-tag">03 · Sourcing</span>
-          <h3>China Sourcing</h3>
+          <span class="service-tag">03 · Production</span>
+          <h3>Full Production Management</h3>
         </div>
-        <p>Need a factory, finished goods, or raw materials? We source it all — factories for your designs, existing products from the Chinese market, and any fabrics, trims, labels or components your brand needs. On the ground in China, with 17 years of supplier relationships.</p>
+        <p>Ready to manufacture at scale? Once your sample is approved, we manage everything — sourcing materials, running production with the right factory, quality inspection, and shipping your finished goods. From approved sample to delivered order, fully handled.</p>
         <a href="mailto:hello@silkassets.top" class="service-cta">Get in touch →</a>
       </div>
 
     </div>
+
+    <div class="service-divider">
+      <span class="eyebrow" style="margin:0;">Or, single-point support</span>
+      <p>Already have part of this handled? Pick up just the piece you need.</p>
+    </div>
+
+    <div class="service-grid service-grid-2">
+
+      <!-- Materials Sourcing -->
+      <div class="service-card">
+        <div>
+          <span class="service-tag">04 · Materials</span>
+          <h3>Materials Sourcing</h3>
+        </div>
+        <p>Already have your own pattern and factory, just need the right materials? We source fabrics, trims, labels and components in China and get them ready for your production line — backed by 17 years of supplier relationships.</p>
+        <a href="mailto:hello@silkassets.top" class="service-cta">Get in touch →</a>
+      </div>
+
+      <!-- Product Sourcing -->
+      <div class="service-card">
+        <div>
+          <span class="service-tag">05 · Sourcing</span>
+          <h3>Product Sourcing</h3>
+        </div>
+        <p>Looking to sell ready-made products instead of developing your own? We find and source existing products from the Chinese market — for resale, private label, or wholesale — so you don't have to navigate the market alone.</p>
+        <a href="mailto:hello@silkassets.top" class="service-cta">Get in touch →</a>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
