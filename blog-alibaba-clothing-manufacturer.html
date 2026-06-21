@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Alibaba Good for Finding a Clothing Manufacturer? | SilkAssets</title>
+<meta name="description" content="Why Alibaba isn't built for small or first-time clothing brands, what the real risks actually are, and what works better — from 17 years sourcing in China.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SilkAssets">
+<meta property="og:title" content="Is Alibaba Good for Finding a Clothing Manufacturer?">
+<meta property="og:description" content="Why Alibaba isn't built for small brands, and what actually works instead — from 17 years sourcing in China.">
+<meta property="og:image" content="https://silkassets.top/images/products/SilkAssets_Blog_Alibaba_Cover.webp">
+<meta property="og:url" content="https://silkassets.top/blog-alibaba-clothing-manufacturer.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Is Alibaba Good for Finding a Clothing Manufacturer?">
+<meta name="twitter:description" content="Why Alibaba isn't built for small brands, and what actually works instead — from 17 years sourcing in China.">
+<meta name="twitter:image" content="https://silkassets.top/images/products/SilkAssets_Blog_Alibaba_Cover.webp">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SilkAssets — "The Spec Sheet" design system
+   Shared stylesheet for index.html and products.html
+   ============================================================ */
+
+:root{
+  --ink:        #14233d;   /* primary ink navy */
+  --ink-soft:   #3c4a63;   /* secondary text */
+  --ink-faint:  #6b7689;   /* muted captions */
+  --paper:      #f4f5f1;   /* cool pattern-paper background */
+  --card:       #ffffff;
+  --line:       #c8cdc4;   /* grid / hairline rules */
+  --line-soft:  #dfe2da;
+  --brass:      #ac811f;   /* gold-thread accent */
+  --brass-deep: #8c6716;
+  --brass-tint: #f0e7cf;
+
+  --maxw: 1280px;
+  --pad: clamp(20px, 5vw, 64px);
+
+  --f-display: "Archivo", system-ui, sans-serif;
+  --f-body: "Hanken Grotesk", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:var(--f-body);
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to right, rgba(20,35,61,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20,35,61,.035) 1px, transparent 1px);
+  background-size:28px 28px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+.wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass-deep);
+  display:inline-flex;
+  align-items:center;
+  gap:.6em;
+  margin:0 0 1.1rem;
+}
+.eyebrow::before{
+  content:"";
+  width:10px; height:10px;
+  border:1.5px solid var(--brass);
+  transform:rotate(45deg);
+  display:inline-block;
+  flex:none;
+}
+
+h1,h2,h3{ font-family:var(--f-display); font-weight:800; line-height:1.05; letter-spacing:-.01em; margin:0; color:var(--ink); }
+h1{ font-size:clamp(2.4rem, 6vw, 4.1rem); }
+h2{ font-size:clamp(1.7rem, 3.6vw, 2.6rem); }
+h3{ font-size:1.18rem; font-weight:700; letter-spacing:0; }
+p{ margin:0 0 1rem; }
+.lead{ font-size:clamp(1.05rem, 1.6vw, 1.22rem); color:var(--ink-soft); max-width:34em; }
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,245,241,.86);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line-soft);
+}
+.topbar .wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+.brand{
+  font-family:var(--f-display); font-weight:800; font-size:1.32rem;
+  letter-spacing:-.02em; text-decoration:none; color:var(--ink);
+  display:inline-flex; align-items:center; gap:.5rem;
+}
+.nav{ display:flex; align-items:center; gap:clamp(1rem,3vw,2.2rem); }
+.nav a{
+  text-decoration:none; color:var(--ink-soft); font-size:.95rem; font-weight:500;
+  position:relative; padding:.2rem 0;
+}
+.nav a:hover{ color:var(--ink); }
+.nav a.nav-cta{
+  font-family:var(--f-mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+  border:1.5px solid var(--ink); color:var(--ink); padding:.5rem .9rem; border-radius:2px;
+}
+.nav a.nav-cta:hover{ background:var(--ink); color:var(--paper); }
+
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--f-mono); font-size:.82rem; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none; cursor:pointer; border:none; border-radius:2px;
+  padding:.85rem 1.4rem; transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn-primary{ background:var(--brass-deep); color:#fff; }
+.btn-primary:hover{ background:#6f5111; transform:translateY(-1px); }
+.btn-ghost{ background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+.btn-ghost:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
+
+.nav-burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-burger span{ display:block; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:all .3s; }
+@media(max-width:680px){
+  .nav-burger{ display:flex; }
+  .topbar{ position:sticky; top:0; z-index:200; }
+  .nav{ display:none; flex-direction:column; position:fixed; top:68px; left:0; right:0;
+    background:var(--paper); border-bottom:2px solid var(--line-soft);
+    padding:1.4rem var(--pad); gap:1.2rem; z-index:199;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08); align-items:flex-end; }
+  .nav.open{ display:flex; }
+  .nav a{ font-size:1rem; color:var(--ink); }
+  .nav .nav-cta{ align-self:flex-end; margin-top:.4rem; }
+}
+
+/* ============================================================
+   BLOG POST (single article)
+   ============================================================ */
+.post-header{ padding:clamp(40px,6vw,72px) 0 clamp(24px,4vw,40px); }
+.post-header .meta{ font-family:var(--f-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--brass-deep); margin-bottom:1rem; }
+.post-header h1{ font-size:clamp(2rem,4.6vw,3.1rem); margin-bottom:1rem; max-width:18em; }
+.post-byline{ color:var(--ink-faint); font-size:.92rem; font-family:var(--f-mono); }
+.post-hero-img{ width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:4px; margin:clamp(24px,4vw,40px) 0; }
+.post-hero-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+.post-body{ max-width:42em; margin:0 auto; padding-bottom:clamp(40px,6vw,64px); }
+.post-body h2{ font-size:clamp(1.4rem,2.6vw,1.9rem); margin:2.4rem 0 1rem; }
+.post-body h3{ font-size:1.1rem; margin:1.8rem 0 .8rem; }
+.post-body p{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; margin-bottom:1.3rem; }
+.post-body ul, .post-body ol{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; padding-left:1.4rem; margin-bottom:1.3rem; }
+.post-body li{ margin-bottom:.5rem; }
+.post-body img{ width:100%; border-radius:4px; margin:1.6rem 0; }
+.post-body blockquote{
+  border-left:3px solid var(--brass); margin:1.8rem 0; padding:.2rem 0 .2rem 1.4rem;
+  font-family:var(--f-display); font-weight:700; font-size:1.25rem; color:var(--ink); line-height:1.4;
+}
+
+.post-cta{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); background:var(--brass-tint);
+  border:1px solid var(--line-soft); border-radius:4px; padding:1.8rem 2rem;
+  display:flex; align-items:center; justify-content:space-between; gap:1.4rem; flex-wrap:wrap;
+}
+.post-cta p{ margin:0; font-weight:600; }
+
+.author-box{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); display:flex; gap:1.2rem; align-items:flex-start;
+  border-top:1px solid var(--line-soft); padding-top:1.8rem;
+}
+.author-box img{ width:52px; height:52px; border-radius:50%; flex:none; }
+.author-box h4{ font-family:var(--f-display); font-weight:800; font-size:1rem; margin-bottom:.3rem; }
+.author-box p{ color:var(--ink-soft); font-size:.92rem; margin:0; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{ background:var(--ink); color:#c4ccdb; padding:clamp(48px,7vw,80px) 0 clamp(24px,4vw,36px); }
+.footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); padding-bottom:clamp(32px,5vw,48px); border-bottom:1px solid #2a3b58; }
+.footer-blurb{ color:#9aa6bd; font-size:.92rem; margin-top:.9rem; max-width:26em; }
+.footer-col h4{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:#fff; margin-bottom:1rem; }
+.footer-col a, .footer-col span{ display:block; color:#9aa6bd; text-decoration:none; font-size:.92rem; margin-bottom:.7rem; }
+.footer-col a:hover{ color:#fff; }
+.footer-base{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8rem; padding-top:1.6rem; font-size:.82rem; color:#7c89a3; }
+.footer-base a{ color:#7c89a3; text-decoration:none; }
+.footer-base a:hover{ color:#fff; }
+
+@media (max-width:880px){
+  .footer-top{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:560px){
+  .footer-top{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+    <nav class="nav" id="nav-menu">
+      <a class="nav-link" href="products.html">Products</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="blog.html">Blog</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-cta" href="products.html#catalog">Browse catalog</a>
+    </nav>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== POST HEADER ===================== -->
+<section class="post-header">
+  <div class="wrap">
+    <p class="meta">Sourcing &middot; <a href="blog.html" style="color:inherit;text-decoration:underline;">Blog</a></p>
+    <h1>Is Alibaba Good for Finding a Clothing Manufacturer?</h1>
+    <p class="post-byline">By Xiao Hongyi &middot; SilkAssets</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="post-hero-img">
+    <img src="images/products/SilkAssets_Blog_Alibaba_Cover.webp" alt="Finding a factory isn't a platform problem. It's an information problem.">
+  </div>
+</div>
+
+<!-- ===================== POST BODY ===================== -->
+<article class="post-body">
+
+<p>If you're starting a clothing brand, Alibaba is almost always the first place you look. It's the biggest name, it's in English, and it feels like the obvious front door into Chinese manufacturing.</p>
+
+<p>Here's the honest answer: Alibaba isn't built for you. Not because it's a scam &mdash; it isn't &mdash; but because the entire platform is designed around a different kind of buyer than a small or first-time brand. Understanding why changes how you should actually go about finding a factory.</p>
+
+<h2>Who Alibaba is really built for</h2>
+<p>Large factories in China already have the clients they need. International retailers, established brands with dedicated sourcing teams, buyers placing orders in the tens of thousands of units &mdash; that's who fills a big factory's calendar. When you're a new brand placing a small first order, you're not bringing leverage to that relationship. You're one inquiry among hundreds, competing for attention against buyers who can guarantee volume you can't.</p>
+<p>That doesn't make those factories bad. It makes them a poor match for where you are right now. Alibaba's search and rating system is built to surface suppliers at scale, not to match a 200-unit first order with a factory that actually wants it.</p>
+
+<h2>Is it safe to buy clothes from Alibaba?</h2>
+<p>This is the question most people actually want answered, and it's usually framed wrong. The risk most new brands picture is getting scammed outright &mdash; paying a deposit and never hearing back. That happens, but it's rarer than you'd think. Competition among factories is fierce, and most suppliers depend on repeat business to survive. Burning a customer for one deposit isn't a winning long-term strategy for them either.</p>
+<p>The real risk is quieter than that: ending up with a factory that <em>can</em> technically make your product, but doesn't specialize in it. You get something that's wearable but not what you pictured &mdash; slightly off construction, a fit that's not quite right, finishing that looks amateur next to what you had in mind. Nobody stole your money. You just got matched with the wrong factory, and a five-star rating won't tell you that in advance.</p>
+
+<h2>How do you know if a supplier is actually legit?</h2>
+<p>Skip the photo galleries. Every supplier's storefront is full of beautiful sample photos &mdash; that tells you what they're capable of producing once, under ideal conditions, not what they consistently make well.</p>
+<p>Ask one direct question instead: <em>what do you make?</em></p>
+<p>A factory that's good at what they do can answer specifically &mdash; a category, maybe two, and a quality tier that matches what you're describing. If a supplier tells you they can make anything you want, that's the answer to walk away from, not toward. No factory does everything well. &ldquo;We can make anything&rdquo; usually means they'll take your order and quietly subcontract it to someone else, with a margin added in the middle &mdash; and you've lost visibility into who's actually making your product.</p>
+
+<h2>Can you buy directly from the manufacturer?</h2>
+<p>Sometimes. But &ldquo;manufacturer&rdquo; on a storefront doesn't always mean what it implies. A meaningful share of Alibaba listings are trading companies &mdash; middlemen who take your order, place it with one of several factories they work with, and add a markup for the coordination. That's not inherently a problem; trading companies can be useful, especially for complex orders that need multiple factories to come together. The issue is when you think you're talking directly to the people making your garment and you're actually one layer removed, with no way to push for changes, ask follow-up questions, or catch issues before they reach you finished.</p>
+<p>If direct contact with the factory floor matters to you &mdash; and for quality control, it should &mdash; this is worth confirming early, not assuming.</p>
+
+<h2>What actually works for a small brand</h2>
+<p>The better path usually isn't a bigger or more famous factory. It's a smaller, specialized one &mdash; the kind with five to fifteen people who've been doing one thing for years, only take orders they're good at, and don't chase fast-fashion volume to fill gaps. These factories rarely show up at the top of a platform search. They don't need to; they survive on word of mouth and repeat clients, not on winning a ratings algorithm.</p>
+
+<blockquote>Finding a factory isn't a platform problem. It's an information problem.</blockquote>
+
+<p>It's knowing which region in China actually specializes in your product category, which factories in that region are quietly good versus quietly declining, and how to ask the right question to tell the difference. That's not something a search bar surfaces. It's something you usually need someone who already knows the market to tell you.</p>
+
+</article>
+
+<!-- ===================== CTA ===================== -->
+<div class="wrap">
+  <div class="post-cta">
+    <p>Want the full picture — 24 production clusters, six chapters, one map?</p>
+    <a class="btn btn-primary" href="https://www.creem.io/payment/prod_5gD7BKwfnGxRAy3mbm1hly">Get Working With Chinese Factories — $59</a>
+  </div>
+
+  <div class="author-box">
+    <div style="width:52px;height:52px;border-radius:50%;flex:none;background:var(--brass-deep);display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--f-display);font-weight:800;color:#fff;font-size:1.1rem;">XH</span></div>
+    <div>
+      <h4>Xiao Hongyi</h4>
+      <p>17 years in apparel &mdash; designer, pattern maker, brand founder, supply chain operator. Based in Wuhan, China. Founder of SilkAssets.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+        <p class="footer-blurb">Design files, development services and China sourcing — built from 17 years inside the apparel supply chain.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="index.html#checklist">Free checklist</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@silkassets.top">hello@silkassets.top</a>
+        <span>WhatsApp Business: SilkAssets</span>
+        <a href="https://pinterest.com/silkassetsstudio" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://instagram.com/silkassetsstudio" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 SilkAssets · silkassets.top</span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burger = document.getElementById('nav-burger');
+const nav = document.getElementById('nav-menu');
+burger.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbee5a338d51415aaea878f0f1cdbb42"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
