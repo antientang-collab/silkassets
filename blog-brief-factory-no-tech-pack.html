@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Brief a Chinese Factory Without a Tech Pack | SilkAssets</title>
+<meta name="description" content="No Tech Pack yet? Here's what actually works when briefing a Chinese factory — and why skipping it will cost you more than you think. From 17 years on the factory floor.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SilkAssets">
+<meta property="og:title" content="How to Brief a Chinese Factory Without a Tech Pack (And Why You Probably Shouldn't)">
+<meta property="og:description" content="What works, what doesn't — and what it actually costs you. From 17 years inside China's garment supply chain.">
+<meta property="og:image" content="https://silkassets.top/images/products/SilkAssets_Blog_TechPack_Cover.webp">
+<meta property="og:url" content="https://silkassets.top/blog-brief-factory-no-tech-pack.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Brief a Chinese Factory Without a Tech Pack (And Why You Probably Shouldn't)">
+<meta name="twitter:description" content="What works, what doesn't — and what it actually costs you.">
+<meta name="twitter:image" content="https://silkassets.top/images/products/SilkAssets_Blog_TechPack_Cover.webp">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SilkAssets — "The Spec Sheet" design system
+   Shared stylesheet for index.html and products.html
+   ============================================================ */
+
+:root{
+  --ink:        #14233d;   /* primary ink navy */
+  --ink-soft:   #3c4a63;   /* secondary text */
+  --ink-faint:  #6b7689;   /* muted captions */
+  --paper:      #f4f5f1;   /* cool pattern-paper background */
+  --card:       #ffffff;
+  --line:       #c8cdc4;   /* grid / hairline rules */
+  --line-soft:  #dfe2da;
+  --brass:      #ac811f;   /* gold-thread accent */
+  --brass-deep: #8c6716;
+  --brass-tint: #f0e7cf;
+
+  --maxw: 1280px;
+  --pad: clamp(20px, 5vw, 64px);
+
+  --f-display: "Archivo", system-ui, sans-serif;
+  --f-body: "Hanken Grotesk", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:var(--f-body);
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to right, rgba(20,35,61,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20,35,61,.035) 1px, transparent 1px);
+  background-size:28px 28px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+.wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass-deep);
+  display:inline-flex;
+  align-items:center;
+  gap:.6em;
+  margin:0 0 1.1rem;
+}
+.eyebrow::before{
+  content:"";
+  width:10px; height:10px;
+  border:1.5px solid var(--brass);
+  transform:rotate(45deg);
+  display:inline-block;
+  flex:none;
+}
+
+h1,h2,h3{ font-family:var(--f-display); font-weight:800; line-height:1.05; letter-spacing:-.01em; margin:0; color:var(--ink); }
+h1{ font-size:clamp(2.4rem, 6vw, 4.1rem); }
+h2{ font-size:clamp(1.7rem, 3.6vw, 2.6rem); }
+h3{ font-size:1.18rem; font-weight:700; letter-spacing:0; }
+p{ margin:0 0 1rem; }
+.lead{ font-size:clamp(1.05rem, 1.6vw, 1.22rem); color:var(--ink-soft); max-width:34em; }
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,245,241,.86);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line-soft);
+}
+.topbar .wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+.brand{
+  font-family:var(--f-display); font-weight:800; font-size:1.32rem;
+  letter-spacing:-.02em; text-decoration:none; color:var(--ink);
+  display:inline-flex; align-items:center; gap:.5rem;
+}
+.nav{ display:flex; align-items:center; gap:clamp(1rem,3vw,2.2rem); }
+.nav a{
+  text-decoration:none; color:var(--ink-soft); font-size:.95rem; font-weight:500;
+  position:relative; padding:.2rem 0;
+}
+.nav a:hover{ color:var(--ink); }
+.nav a.nav-cta{
+  font-family:var(--f-mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+  border:1.5px solid var(--ink); color:var(--ink); padding:.5rem .9rem; border-radius:2px;
+}
+.nav a.nav-cta:hover{ background:var(--ink); color:var(--paper); }
+
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--f-mono); font-size:.82rem; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none; cursor:pointer; border:none; border-radius:2px;
+  padding:.85rem 1.4rem; transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn-primary{ background:var(--brass-deep); color:#fff; }
+.btn-primary:hover{ background:#6f5111; transform:translateY(-1px); }
+.btn-ghost{ background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+.btn-ghost:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
+
+.nav-burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-burger span{ display:block; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:all .3s; }
+@media(max-width:680px){
+  .nav-burger{ display:flex; }
+  .topbar{ position:sticky; top:0; z-index:200; }
+  .nav{ display:none; flex-direction:column; position:fixed; top:68px; left:0; right:0;
+    background:var(--paper); border-bottom:2px solid var(--line-soft);
+    padding:1.4rem var(--pad); gap:1.2rem; z-index:199;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08); align-items:flex-end; }
+  .nav.open{ display:flex; }
+  .nav a{ font-size:1rem; color:var(--ink); }
+  .nav .nav-cta{ align-self:flex-end; margin-top:.4rem; }
+}
+
+/* ============================================================
+   BLOG POST (single article)
+   ============================================================ */
+.post-header{ padding:clamp(40px,6vw,72px) 0 clamp(24px,4vw,40px); }
+.post-header .meta{ font-family:var(--f-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--brass-deep); margin-bottom:1rem; }
+.post-header h1{ font-size:clamp(2rem,4.6vw,3.1rem); margin-bottom:1rem; max-width:18em; }
+.post-byline{ color:var(--ink-faint); font-size:.92rem; font-family:var(--f-mono); }
+.post-hero-img{ width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:4px; margin:clamp(24px,4vw,40px) 0; }
+.post-hero-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+.post-body{ max-width:42em; margin:0 auto; padding-bottom:clamp(40px,6vw,64px); }
+.post-body h2{ font-size:clamp(1.4rem,2.6vw,1.9rem); margin:2.4rem 0 1rem; }
+.post-body h3{ font-size:1.1rem; margin:1.8rem 0 .8rem; }
+.post-body p{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; margin-bottom:1.3rem; }
+.post-body ul, .post-body ol{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; padding-left:1.4rem; margin-bottom:1.3rem; }
+.post-body li{ margin-bottom:.5rem; }
+.post-body img{ width:100%; border-radius:4px; margin:1.6rem 0; }
+.post-body blockquote{
+  border-left:3px solid var(--brass); margin:1.8rem 0; padding:.2rem 0 .2rem 1.4rem;
+  font-family:var(--f-display); font-weight:700; font-size:1.25rem; color:var(--ink); line-height:1.4;
+}
+
+.post-cta{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); background:var(--brass-tint);
+  border:1px solid var(--line-soft); border-radius:4px; padding:1.8rem 2rem;
+  display:flex; align-items:center; justify-content:space-between; gap:1.4rem; flex-wrap:wrap;
+}
+.post-cta p{ margin:0; font-weight:600; }
+
+.author-box{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); display:flex; gap:1.2rem; align-items:flex-start;
+  border-top:1px solid var(--line-soft); padding-top:1.8rem;
+}
+.author-box img{ width:52px; height:52px; border-radius:50%; flex:none; }
+.author-box h4{ font-family:var(--f-display); font-weight:800; font-size:1rem; margin-bottom:.3rem; }
+.author-box p{ color:var(--ink-soft); font-size:.92rem; margin:0; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{ background:var(--ink); color:#c4ccdb; padding:clamp(48px,7vw,80px) 0 clamp(24px,4vw,36px); }
+.footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); padding-bottom:clamp(32px,5vw,48px); border-bottom:1px solid #2a3b58; }
+.footer-blurb{ color:#9aa6bd; font-size:.92rem; margin-top:.9rem; max-width:26em; }
+.footer-col h4{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:#fff; margin-bottom:1rem; }
+.footer-col a, .footer-col span{ display:block; color:#9aa6bd; text-decoration:none; font-size:.92rem; margin-bottom:.7rem; }
+.footer-col a:hover{ color:#fff; }
+.footer-base{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8rem; padding-top:1.6rem; font-size:.82rem; color:#7c89a3; }
+.footer-base a{ color:#7c89a3; text-decoration:none; }
+.footer-base a:hover{ color:#fff; }
+
+@media (max-width:880px){
+  .footer-top{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:560px){
+  .footer-top{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+    <nav class="nav" id="nav-menu">
+      <a class="nav-link" href="products.html">Products</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="blog.html">Blog</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-cta" href="products.html#catalog">Browse catalog</a>
+    </nav>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== POST HEADER ===================== -->
+<section class="post-header">
+  <div class="wrap">
+    <p class="meta">Tech Packs &middot; <a href="blog.html" style="color:inherit;text-decoration:underline;">Blog</a></p>
+    <h1>How to Brief a Chinese Factory Without a Tech Pack (And Why You Probably Shouldn't)</h1>
+    <p class="post-byline">By Xiao Hongyi &middot; SilkAssets</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="post-hero-img">
+    <img src="images/products/SilkAssets_Blog_TechPack_Cover.webp" alt="How to Brief a Chinese Factory Without a Tech Pack — SilkAssets">
+  </div>
+</div>
+
+<!-- ===================== POST BODY ===================== -->
+<article class="post-body">
+
+<p>A lot of independent brands ask the same question when they're starting out: do I really need a Tech Pack? Can I just explain what I want directly to the factory and skip that step?</p>
+
+<p>The honest answer is: yes, you can brief a factory without one. But you'll pay for it &mdash; not necessarily in money, but in time, in repeat sampling costs, and in a final product that's close to what you wanted but not quite there.</p>
+
+<h2>How factories actually handle briefs without a Tech Pack</h2>
+
+<p>Chinese factories receive dozens of inquiries every day, most of them from buyers who don't fully understand the production process. They've developed a way of handling this: if you send a photo and a few lines of description, the factory will make their best interpretation and proceed. They won't ask you about every detail &mdash; that takes too much time. They'll guess.</p>
+
+<p>The result is predictable. Your first sample arrives and the collar sits differently than you pictured, the stitching method isn't what you had in mind, the fabric weight is off. None of this is the factory being difficult. It's the inevitable result of incomplete information.</p>
+
+<h2>What you can use instead of a Tech Pack</h2>
+
+<p>If you genuinely don't have a Tech Pack yet, these four things will get you further than a description alone.</p>
+
+<h3>① A reference garment</h3>
+<p>Send a finished garment you like to the factory and ask them to sample based on it. This is the most direct form of communication available &mdash; a physical object eliminates a significant amount of ambiguity. But you still need to specify what to keep, what to change, and what the reference garment gets right that you want to preserve.</p>
+
+<h3>② A complete size chart</h3>
+<p>Even without a full Tech Pack, a detailed measurement chart covering every part of the garment is essential. Don't tell a factory to "make it in a size M." Every factory has a different interpretation of what M means. Give them specific measurements for every point of measure: chest, waist, hip, sleeve length, hem width, armhole depth &mdash; everything.</p>
+
+<h3>③ A fabric swatch</h3>
+<p>If you have a specific fabric requirement, send a physical swatch. No written description of a fabric is as clear as the fabric itself. The factory can match weight, hand feel, and structure directly without guessing.</p>
+
+<h3>④ Construction detail sketches</h3>
+<p>For any construction detail you're not confident will be understood &mdash; a specific pocket shape, a particular seam finish, a collar construction &mdash; draw it. A rough sketch with annotations is worth more than a paragraph of description.</p>
+
+<h2>Why these workarounds all have limits</h2>
+
+<p>A reference garment communicates silhouette and proportion, but it can't communicate your quality standards, your finish requirements, or your specific construction preferences. The factory will interpret those based on their own defaults.</p>
+
+<p>A size chart solves the measurement problem but leaves structure, fabric, trims, labels, and packaging undefined.</p>
+
+<p>A fabric swatch solves the fabric problem but leaves the pattern undefined.</p>
+
+<p>Each workaround covers one part of the picture. A Tech Pack's value is that it covers all of them at once &mdash; a single document that replaces weeks of back-and-forth emails, repeated clarifications, and preventable sample revisions.</p>
+
+<h2>What briefing without a Tech Pack actually costs you</h2>
+
+<p>The sampling fee isn't the real cost. A sample might run you $100&ndash;300. That's manageable.</p>
+
+<p>The real cost is time.</p>
+
+<p>A brand with a complete Tech Pack can move from sample approval to bulk production in six to eight weeks. A brand communicating by email, photo, and description &mdash; revising samples, clarifying misunderstandings, correcting details that were never specified &mdash; can spend four to six months covering the same ground.</p>
+
+<blockquote>In those four to six months, your competitor has already shipped.</blockquote>
+
+<p>There's also a subtler cost. Every round of sample revision signals to the factory that you don't know exactly what you want. Factories prioritize clients who communicate clearly. A buyer who sends precise documentation gets faster responses, more accurate samples, and more goodwill when problems arise. A buyer who communicates vaguely becomes a low-priority account.</p>
+
+<h2>When it's reasonable to skip the Tech Pack</h2>
+
+<p>If you're sampling a concept purely to see whether an idea is viable &mdash; a small exploratory order, not intended for production &mdash; then a full Tech Pack is probably more work than the stage requires. Get the sample, see whether the concept holds up, and build the documentation once you've decided to move forward.</p>
+
+<p>But once you're committing to production, once you're placing a real order with real money, a Tech Pack stops being optional. At that point you're managing risk, and undefined specifications are the most common source of production problems.</p>
+
+<h2>The bottom line</h2>
+
+<p>You can brief a factory without a Tech Pack. People do it every day. But you're trading efficiency for convenience &mdash; using time and repeat sampling to do what documentation would have done faster and more accurately.</p>
+
+<p>If you're ready to stop guessing and start specifying, the Tech Pack template at SilkAssets is built to the standard Chinese factories actually need &mdash; not a generic form, but a working document built from 17 years of factory floor experience.</p>
+
+</article>
+
+<!-- ===================== CTA ===================== -->
+<div class="wrap">
+  <div class="post-cta">
+    <p>Ready to stop guessing? The SilkAssets Tech Pack template is built to the standard Chinese factories actually need.</p>
+    <a class="btn btn-primary" href="https://silkassets.top/products.html">Get the Tech Pack Template &rarr;</a>
+  </div>
+
+  <div class="author-box">
+    <div style="width:52px;height:52px;border-radius:50%;flex:none;background:var(--brass-deep);display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--f-display);font-weight:800;color:#fff;font-size:1.1rem;">XH</span></div>
+    <div>
+      <h4>Xiao Hongyi</h4>
+      <p>17 years in apparel &mdash; designer, pattern maker, brand founder, supply chain operator. Based in Wuhan, China. Founder of SilkAssets.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+        <p class="footer-blurb">Design files, development services and China sourcing — built from 17 years inside the apparel supply chain.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="index.html#checklist">Free checklist</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@silkassets.top">hello@silkassets.top</a>
+        <span>WhatsApp Business: SilkAssets</span>
+        <a href="https://pinterest.com/silkassetsstudio" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://instagram.com/silkassetsstudio" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 SilkAssets · silkassets.top</span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burger = document.getElementById('nav-burger');
+const nav = document.getElementById('nav-menu');
+burger.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbee5a338d51415aaea878f0f1cdbb42"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
