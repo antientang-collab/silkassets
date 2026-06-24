@@ -1,651 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How Much Does It Cost to Make Clothes in China? | SilkAssets</title>
-  <meta name="description" content="A factory insider's honest breakdown of clothing manufacturing costs in China — the real numbers, hidden fees, and what factories don't tell you." />
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Does It Cost to Make Clothes in China? | SilkAssets</title>
+<meta name="description" content="A factory insider's honest breakdown of clothing manufacturing costs in China — the real numbers, hidden fees, and what factories don't tell you.">
 
-    :root {
-      --cream: #F5F0E8;
-      --navy: #1A2B4A;
-      --gold: #C8952A;
-      --text: #2D3748;
-      --muted: #6B7280;
-      --border: #E2D9C8;
-      --highlight: #EDE8DE;
-    }
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SilkAssets">
+<meta property="og:title" content="How Much Does It Cost to Make Clothes in China? A Factory Insider's Honest Breakdown.">
+<meta property="og:description" content="The numbers factories show you, the ones they don't — and what actually drives the price difference. From 17 years inside China's garment supply chain.">
+<meta property="og:image" content="https://silkassets.top/images/products/SilkAssets_Blog_ChinaCost_Cover.webp">
+<meta property="og:url" content="https://silkassets.top/blog-manufacturing-cost-china.html">
 
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.75;
-    }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Much Does It Cost to Make Clothes in China? A Factory Insider's Honest Breakdown.">
+<meta name="twitter:description" content="The numbers factories show you, the ones they don't — and what actually drives the price difference.">
+<meta name="twitter:image" content="https://silkassets.top/images/products/SilkAssets_Blog_ChinaCost_Cover.webp">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SilkAssets — "The Spec Sheet" design system
+   Shared stylesheet for index.html and products.html
+   ============================================================ */
 
-    /* NAV */
-    nav {
-      background: var(--cream);
-      border-bottom: 1px solid var(--border);
-      padding: 0 48px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+:root{
+  --ink:        #14233d;   /* primary ink navy */
+  --ink-soft:   #3c4a63;   /* secondary text */
+  --ink-faint:  #6b7689;   /* muted captions */
+  --paper:      #f4f5f1;   /* cool pattern-paper background */
+  --card:       #ffffff;
+  --line:       #c8cdc4;   /* grid / hairline rules */
+  --line-soft:  #dfe2da;
+  --brass:      #ac811f;   /* gold-thread accent */
+  --brass-deep: #8c6716;
+  --brass-tint: #f0e7cf;
 
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
+  --maxw: 1280px;
+  --pad: clamp(20px, 5vw, 64px);
 
-    .nav-logo-box {
-      width: 32px;
-      height: 32px;
-      border: 1.5px solid var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--navy);
-    }
+  --f-display: "Archivo", system-ui, sans-serif;
+  --f-body: "Hanken Grotesk", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
 
-    .nav-brand-name {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: 0.03em;
-    }
+*,*::before,*::after{ box-sizing:border-box; }
 
-    .nav-brand-name span { color: var(--gold); }
+html{ scroll-behavior:smooth; }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
+body{
+  margin:0;
+  font-family:var(--f-body);
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to right, rgba(20,35,61,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20,35,61,.035) 1px, transparent 1px);
+  background-size:28px 28px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
 
-    .nav-links a {
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--navy);
-      text-decoration: none;
-    }
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
 
-    .nav-links a:hover { color: var(--gold); }
+.wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
 
-    .nav-cta {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--navy);
-      border: 1.5px solid var(--navy);
-      padding: 8px 18px;
-      text-decoration: none;
-    }
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass-deep);
+  display:inline-flex;
+  align-items:center;
+  gap:.6em;
+  margin:0 0 1.1rem;
+}
+.eyebrow::before{
+  content:"";
+  width:10px; height:10px;
+  border:1.5px solid var(--brass);
+  transform:rotate(45deg);
+  display:inline-block;
+  flex:none;
+}
 
-    .nav-cta:hover {
-      background: var(--navy);
-      color: var(--cream);
-    }
+h1,h2,h3{ font-family:var(--f-display); font-weight:800; line-height:1.05; letter-spacing:-.01em; margin:0; color:var(--ink); }
+h1{ font-size:clamp(2.4rem, 6vw, 4.1rem); }
+h2{ font-size:clamp(1.7rem, 3.6vw, 2.6rem); }
+h3{ font-size:1.18rem; font-weight:700; letter-spacing:0; }
+p{ margin:0 0 1rem; }
+.lead{ font-size:clamp(1.05rem, 1.6vw, 1.22rem); color:var(--ink-soft); max-width:34em; }
 
-    /* HERO */
-    .hero {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 72px 48px 48px;
-    }
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,245,241,.86);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line-soft);
+}
+.topbar .wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+.brand{
+  font-family:var(--f-display); font-weight:800; font-size:1.32rem;
+  letter-spacing:-.02em; text-decoration:none; color:var(--ink);
+  display:inline-flex; align-items:center; gap:.5rem;
+}
+.nav{ display:flex; align-items:center; gap:clamp(1rem,3vw,2.2rem); }
+.nav a{
+  text-decoration:none; color:var(--ink-soft); font-size:.95rem; font-weight:500;
+  position:relative; padding:.2rem 0;
+}
+.nav a:hover{ color:var(--ink); }
+.nav a.nav-cta{
+  font-family:var(--f-mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+  border:1.5px solid var(--ink); color:var(--ink); padding:.5rem .9rem; border-radius:2px;
+}
+.nav a.nav-cta:hover{ background:var(--ink); color:var(--paper); }
 
-    .eyebrow {
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--f-mono); font-size:.82rem; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none; cursor:pointer; border:none; border-radius:2px;
+  padding:.85rem 1.4rem; transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn-primary{ background:var(--brass-deep); color:#fff; }
+.btn-primary:hover{ background:#6f5111; transform:translateY(-1px); }
+.btn-ghost{ background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+.btn-ghost:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
 
-    .eyebrow::before { content: '◇'; font-size: 10px; }
+.nav-burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-burger span{ display:block; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:all .3s; }
+@media(max-width:680px){
+  .nav-burger{ display:flex; }
+  .topbar{ position:sticky; top:0; z-index:200; }
+  .nav{ display:none; flex-direction:column; position:fixed; top:68px; left:0; right:0;
+    background:var(--paper); border-bottom:2px solid var(--line-soft);
+    padding:1.4rem var(--pad); gap:1.2rem; z-index:199;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08); align-items:flex-end; }
+  .nav.open{ display:flex; }
+  .nav a{ font-size:1rem; color:var(--ink); }
+  .nav .nav-cta{ align-self:flex-end; margin-top:.4rem; }
+}
 
-    .hero h1 {
-      font-size: 46px;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
+/* ============================================================
+   BLOG POST (single article)
+   ============================================================ */
+.post-header{ padding:clamp(40px,6vw,72px) 0 clamp(24px,4vw,40px); }
+.post-header .meta{ font-family:var(--f-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--brass-deep); margin-bottom:1rem; }
+.post-header h1{ font-size:clamp(2rem,4.6vw,3.1rem); margin-bottom:1rem; max-width:18em; }
+.post-byline{ color:var(--ink-faint); font-size:.92rem; font-family:var(--f-mono); }
+.post-hero-img{ width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:4px; margin:clamp(24px,4vw,40px) 0; }
+.post-hero-img img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-    .hero-deck {
-      font-size: 20px;
-      color: var(--muted);
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 640px;
-    }
+.post-body{ max-width:42em; margin:0 auto; padding-bottom:clamp(40px,6vw,64px); }
+.post-body h2{ font-size:clamp(1.4rem,2.6vw,1.9rem); margin:2.4rem 0 1rem; }
+.post-body h3{ font-size:1.1rem; margin:1.8rem 0 .8rem; }
+.post-body p{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; margin-bottom:1.3rem; }
+.post-body ul, .post-body ol{ font-size:1.05rem; color:var(--ink-soft); line-height:1.75; padding-left:1.4rem; margin-bottom:1.3rem; }
+.post-body li{ margin-bottom:.5rem; }
+.post-body img{ width:100%; border-radius:4px; margin:1.6rem 0; }
+.post-body blockquote{
+  border-left:3px solid var(--brass); margin:1.8rem 0; padding:.2rem 0 .2rem 1.4rem;
+  font-family:var(--f-display); font-weight:700; font-size:1.25rem; color:var(--ink); line-height:1.4;
+}
 
-    .author-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+.post-cta{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); background:var(--brass-tint);
+  border:1px solid var(--line-soft); border-radius:4px; padding:1.8rem 2rem;
+  display:flex; align-items:center; justify-content:space-between; gap:1.4rem; flex-wrap:wrap;
+}
+.post-cta p{ margin:0; font-weight:600; }
 
-    .author-avatar {
-      width: 40px;
-      height: 40px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--cream);
-      font-family: 'Courier New', monospace;
-      flex-shrink: 0;
-    }
+.author-box{
+  max-width:42em; margin:0 auto clamp(40px,6vw,64px); display:flex; gap:1.2rem; align-items:flex-start;
+  border-top:1px solid var(--line-soft); padding-top:1.8rem;
+}
+.author-box img{ width:52px; height:52px; border-radius:50%; flex:none; }
+.author-box h4{ font-family:var(--f-display); font-weight:800; font-size:1rem; margin-bottom:.3rem; }
+.author-box p{ color:var(--ink-soft); font-size:.92rem; margin:0; }
 
-    .author-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-    }
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{ background:var(--ink); color:#c4ccdb; padding:clamp(48px,7vw,80px) 0 clamp(24px,4vw,36px); }
+.footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); padding-bottom:clamp(32px,5vw,48px); border-bottom:1px solid #2a3b58; }
+.footer-blurb{ color:#9aa6bd; font-size:.92rem; margin-top:.9rem; max-width:26em; }
+.footer-col h4{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:#fff; margin-bottom:1rem; }
+.footer-col a, .footer-col span{ display:block; color:#9aa6bd; text-decoration:none; font-size:.92rem; margin-bottom:.7rem; }
+.footer-col a:hover{ color:#fff; }
+.footer-base{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8rem; padding-top:1.6rem; font-size:.82rem; color:#7c89a3; }
+.footer-base a{ color:#7c89a3; text-decoration:none; }
+.footer-base a:hover{ color:#fff; }
 
-    .author-meta {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-    }
-
-    /* COVER IMAGE */
-    .cover-image {
-      max-width: 860px;
-      margin: 0 auto 0;
-      padding: 0 48px 48px;
-    }
-
-    .cover-image img {
-      width: 100%;
-      display: block;
-      border: 1px solid var(--border);
-    }
-
-    /* ARTICLE BODY */
-    article {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 48px 80px;
-    }
-
-    article p {
-      font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 24px;
-      color: var(--text);
-    }
-
-    article h2 {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--navy);
-      margin: 48px 0 16px;
-      line-height: 1.3;
-    }
-
-    article h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-      margin: 32px 0 12px;
-    }
-
-    .gold-rule {
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
-      margin: 0 0 32px;
-    }
-
-    /* CALLOUT */
-    .callout {
-      border-left: 3px solid var(--gold);
-      background: var(--highlight);
-      padding: 20px 24px;
-      margin: 32px 0;
-    }
-
-    .callout p {
-      margin: 0;
-      font-size: 17px;
-      font-style: italic;
-      color: var(--navy);
-    }
-
-    /* PRICE TABLE */
-    .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0 32px;
-      font-size: 15px;
-    }
-
-    .price-table th {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-align: left;
-      padding: 10px 16px;
-      border-bottom: 2px solid var(--navy);
-      background: var(--highlight);
-    }
-
-    .price-table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
-      font-size: 15px;
-    }
-
-    .price-table tr:last-child td { border-bottom: none; }
-
-    .price-table .cat { font-weight: 600; color: var(--navy); }
-    .price-table .lo { color: var(--muted); }
-    .price-table .hi { font-weight: 600; color: var(--gold); }
-
-    /* CHECKLIST */
-    .checklist {
-      list-style: none;
-      margin: 16px 0 32px;
-      padding: 0;
-    }
-
-    .checklist li {
-      font-size: 16px;
-      padding: 10px 0 10px 28px;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      color: var(--text);
-    }
-
-    .checklist li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-family: 'Courier New', monospace;
-    }
-
-    .checklist li:last-child { border-bottom: none; }
-
-    /* CTA BLOCK */
-    .cta-block {
-      background: var(--highlight);
-      border: 1px solid var(--border);
-      padding: 40px 48px;
-      margin: 64px 0 0;
-      text-align: center;
-    }
-
-    .cta-block p {
-      font-size: 17px;
-      color: var(--navy);
-      margin-bottom: 20px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--cream);
-      background: var(--gold);
-      padding: 14px 32px;
-      text-decoration: none;
-    }
-
-    .cta-button:hover { background: var(--navy); }
-
-    /* AUTHOR BIO */
-    .author-bio {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 48px 80px;
-    }
-
-    .author-bio-inner {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-
-    .author-bio-avatar {
-      width: 48px;
-      height: 48px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--cream);
-      font-family: 'Courier New', monospace;
-      flex-shrink: 0;
-    }
-
-    .author-bio-name {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .author-bio-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--cream);
-      border-top: 1px solid var(--border);
-      padding: 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 48px;
-    }
-
-    .footer-brand-name {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .footer-brand-name span { color: var(--gold); }
-
-    .footer-tagline {
-      font-size: 13px;
-      color: var(--muted);
-      max-width: 280px;
-      line-height: 1.6;
-    }
-
-    .footer-col h4 {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .footer-col a {
-      display: block;
-      font-size: 14px;
-      color: var(--muted);
-      text-decoration: none;
-      margin-bottom: 8px;
-    }
-
-    .footer-col a:hover { color: var(--gold); }
-
-    .footer-bottom {
-      background: var(--cream);
-      border-top: 1px solid var(--border);
-      padding: 20px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-bottom p {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-    }
-
-    .footer-bottom a {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 24px;
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 0 24px; }
-      .nav-links { display: none; }
-      .hero { padding: 48px 24px 32px; }
-      .hero h1 { font-size: 32px; }
-      .cover-image { padding: 0 24px 32px; }
-      article { padding: 0 24px 64px; }
-      .cta-block { padding: 32px 24px; }
-      .author-bio { padding: 0 24px 48px; }
-      footer { flex-direction: column; padding: 32px 24px; }
-      .footer-bottom { flex-direction: column; gap: 8px; padding: 16px 24px; }
-    }
-  </style>
+@media (max-width:880px){
+  .footer-top{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:560px){
+  .footer-top{ grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="https://silkassets.top" class="nav-brand">
-    <div class="nav-logo-box">⚑</div>
-    <div class="nav-brand-name">Silk<span>Assets</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://silkassets.top/#products">Products</a></li>
-    <li><a href="https://silkassets.top/#services">Services</a></li>
-    <li><a href="https://silkassets.top/blog.html">Blog</a></li>
-    <li><a href="https://silkassets.top/#about">About</a></li>
-  </ul>
-  <a href="https://silkassets.top" class="nav-cta">Browse Catalog</a>
-</nav>
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+    <nav class="nav" id="nav-menu">
+      <a class="nav-link" href="products.html">Products</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="blog.html">Blog</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-cta" href="products.html#catalog">Browse catalog</a>
+    </nav>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="eyebrow">Sourcing · SilkAssets Blog</div>
-  <h1>How Much Does It Cost to Make Clothes in China?<br>A Factory Insider's Honest Breakdown.</h1>
-  <p class="hero-deck">The numbers factories show you, the numbers they don't — and what actually drives the price difference.</p>
-  <div class="author-row">
-    <div class="author-avatar">XH</div>
-    <div>
-      <div class="author-name">Xiao Hongyi</div>
-      <div class="author-meta">17 years in apparel · Founder, SilkAssets · Based in Wuhan, China</div>
-    </div>
+<!-- ===================== POST HEADER ===================== -->
+<section class="post-header">
+  <div class="wrap">
+    <p class="meta">Sourcing &middot; <a href="blog.html" style="color:inherit;text-decoration:underline;">Blog</a></p>
+    <h1>How Much Does It Cost to Make Clothes in China? A Factory Insider's Honest Breakdown.</h1>
+    <p class="post-byline">By Xiao Hongyi &middot; SilkAssets</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="post-hero-img">
+    <img src="images/products/SilkAssets_Blog_ChinaCost_Cover.webp" alt="How Much Does It Cost to Make Clothes in China — SilkAssets">
   </div>
 </div>
 
-<!-- COVER IMAGE -->
-<div class="cover-image">
-  <img src="images/products/SilkAssets_Blog_ChinaCost_Cover.webp" alt="How Much Does It Cost to Make Clothes in China — SilkAssets" />
-</div>
+<!-- ===================== POST BODY ===================== -->
+<article class="post-body">
 
-<!-- ARTICLE -->
-<article>
-  <div class="gold-rule"></div>
+<p>Most of the numbers you find online about clothing manufacturing costs in China were written by factories. Their goal is to get you to send an inquiry. This article is different. I've spent 17 years inside China's garment supply chain &mdash; as a designer, pattern maker, brand founder, sourcing agent, and production manager. I'm going to tell you what the numbers actually look like.</p>
 
-  <p>Most of the numbers you find online about clothing manufacturing costs in China were written by factories. Their goal is to get you to send an inquiry. This article is different. I've spent 17 years inside China's garment supply chain — as a designer, pattern maker, brand founder, sourcing agent, and production manager. I'm going to tell you what the numbers actually look like.</p>
+<h2>Why the quotes you see online don't mean much</h2>
 
-  <h2>Why the quotes you see online don't mean much</h2>
+<p>"T-shirts from $2." You've seen this. It's not a lie. But it's only true under a very specific set of conditions: large order volume, the most basic fabric, the simplest construction, and the cheapest factory.</p>
 
-  <p>"T-shirts from $2." You've seen this. It's not a lie. But it's only true under a very specific set of conditions: large order volume, the most basic fabric, the simplest construction, and the cheapest factory.</p>
+<p>The reality is that the same basic t-shirt can cost $1&ndash;2 at a Guangzhou market factory and $5&ndash;8 at a brand-quality factory. Same country. Same garment. Five times the price difference. The cheap factory isn't necessarily cheating you &mdash; they just serve a completely different kind of client.</p>
 
-  <p>The reality is that the same basic t-shirt can cost $1–2 at a Guangzhou market factory and $5–8 at a brand-quality factory. Same country. Same garment. Five times the price difference. The cheap factory isn't necessarily cheating you — they just serve a completely different kind of client.</p>
+<h2>The four things that actually determine your cost</h2>
 
-  <h2>The four things that actually determine your cost</h2>
+<h3>&circone; Fabric</h3>
+<p>Fabric typically accounts for 50&ndash;70% of your total unit cost. Plain cotton versus organic cotton: up to 3x the price. Standard polyester versus technical waterproof fabric: up to 5x. Once you've locked in the fabric, you've locked in most of the cost. Everything else is much smaller in comparison.</p>
 
-  <h3>① Fabric</h3>
-  <p>Fabric typically accounts for 50–70% of your total unit cost. Plain cotton versus organic cotton: up to 3x the price. Standard polyester versus technical waterproof fabric: up to 5x. Once you've locked in the fabric, you've locked in most of the cost. Everything else is much smaller in comparison.</p>
+<h3>&circone; Construction complexity</h3>
+<p>A basic crew-neck tee and a tee with panelling, pockets, and special topstitching have very different labour costs. Factories charge per operation &mdash; more steps, higher price. This is why a "simple" garment with ten construction details is never as simple as it looks on paper.</p>
 
-  <h3>② Construction complexity</h3>
-  <p>A basic crew-neck tee and a tee with panelling, pockets, and special topstitching have very different labour costs. Factories charge per operation — more steps, higher price. This is why a "simple" garment with ten construction details is never as simple as it looks on paper.</p>
+<h3>&circone; Order quantity (MOQ)</h3>
+<p>This is the factor most people underestimate. The same style, the same factory:</p>
+<ul>
+  <li>100 pieces &mdash; unit cost might be $15</li>
+  <li>500 pieces &mdash; unit cost might be $9</li>
+  <li>2,000 pieces &mdash; unit cost might be $6</li>
+</ul>
+<p>Smaller orders cost more per piece. For a startup brand, this is unavoidable. Build it into your pricing from the start.</p>
 
-  <h3>③ Order quantity (MOQ)</h3>
-  <p>This is the factor most people underestimate. The same style, the same factory:</p>
-  <ul class="checklist">
-    <li>100 pieces — unit cost might be $15</li>
-    <li>500 pieces — unit cost might be $9</li>
-    <li>2,000 pieces — unit cost might be $6</li>
-  </ul>
-  <p>Smaller orders cost more per piece. For a startup brand, this is unavoidable. Build it into your pricing from the start.</p>
+<h3>&circone; Factory type and region</h3>
+<p>China's garment industry is built around regional clusters &mdash; different provinces specialise in different product types. The right factory for knitwear is not the same as the right factory for denim or outerwear. Finding your product's cluster is one of the highest-leverage decisions you can make.</p>
 
-  <h3>④ Factory type and region</h3>
-  <p>China's garment industry is built around regional clusters — different provinces specialise in different product types. The right factory for knitwear is not the same as the right factory for denim or outerwear. Finding your product's cluster is one of the highest-leverage decisions you can make.</p>
+<h2>The truth about Guangzhou</h2>
 
-  <h2>The truth about Guangzhou</h2>
+<p>Guangzhou has the highest international name recognition of any Chinese garment city. It also has the most inconsistent quality. A significant part of why overseas buyers believe "Chinese quality is poor" comes from starting in Guangzhou &mdash; which runs on fast fashion speed and volume, not craft or precision.</p>
 
-  <p>Guangzhou has the highest international name recognition of any Chinese garment city. It also has the most inconsistent quality. A significant part of why overseas buyers believe "Chinese quality is poor" comes from starting in Guangzhou — which runs on fast fashion speed and volume, not craft or precision.</p>
+<p>That said, you cannot avoid Guangzhou entirely. It has the most complete fabric and trim market in the country. Whatever you need &mdash; any fabric, any trim, any special finish &mdash; you can find it in Guangzhou, often with same-day sourcing. The correct approach for most brands is to source materials in Guangzhou and produce in the right specialist region for your product type.</p>
 
-  <p>That said, you cannot avoid Guangzhou. The reason: it has the most complete fabric and trim market in the country. Whatever you need — any fabric, any trim, any special finish — you can find it in Guangzhou, often with same-day sourcing. The correct approach for most brands is to source materials in Guangzhou and produce in the right specialist region for your product type.</p>
+<h2>Real price ranges by category (2026)</h2>
 
-  <h2>Real price ranges by category (2026)</h2>
-  <p>All prices are EXW (ex-factory), excluding shipping, based on orders of 200–500 units. These are reference ranges — they shift with fabric prices, labour costs, and order specifics.</p>
+<p>All prices are EXW (ex-factory), excluding shipping, based on orders of 200&ndash;500 units. These are reference ranges &mdash; they shift with fabric prices, labour costs, and order specifics.</p>
 
-  <table class="price-table">
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>Standard factory</th>
-        <th>Quality factory</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td class="cat">Basic t-shirt</td><td class="lo">$3–5</td><td class="hi">$6–12</td></tr>
-      <tr><td class="cat">Polo shirt</td><td class="lo">$5–8</td><td class="hi">$10–18</td></tr>
-      <tr><td class="cat">Casual trousers</td><td class="lo">$8–12</td><td class="hi">$15–25</td></tr>
-      <tr><td class="cat">Dress</td><td class="lo">$10–18</td><td class="hi">$20–40</td></tr>
-      <tr><td class="cat">Basic jacket</td><td class="lo">$15–25</td><td class="hi">$30–60</td></tr>
-      <tr><td class="cat">Down jacket</td><td class="lo">$25–40</td><td class="hi">$50–120</td></tr>
-    </tbody>
-  </table>
+<table style="width:100%;border-collapse:collapse;margin:1.6rem 0;font-size:.98rem;">
+  <thead>
+    <tr style="border-bottom:2px solid var(--ink);">
+      <th style="text-align:left;padding:10px 12px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);">Category</th>
+      <th style="text-align:left;padding:10px 12px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);">Standard factory</th>
+      <th style="text-align:left;padding:10px 12px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);">Quality factory</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:10px 12px;font-weight:600;">Basic t-shirt</td><td style="padding:10px 12px;color:var(--ink-soft);">$3&ndash;5</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$6&ndash;12</td></tr>
+    <tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:10px 12px;font-weight:600;">Polo shirt</td><td style="padding:10px 12px;color:var(--ink-soft);">$5&ndash;8</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$10&ndash;18</td></tr>
+    <tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:10px 12px;font-weight:600;">Casual trousers</td><td style="padding:10px 12px;color:var(--ink-soft);">$8&ndash;12</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$15&ndash;25</td></tr>
+    <tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:10px 12px;font-weight:600;">Dress</td><td style="padding:10px 12px;color:var(--ink-soft);">$10&ndash;18</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$20&ndash;40</td></tr>
+    <tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:10px 12px;font-weight:600;">Basic jacket</td><td style="padding:10px 12px;color:var(--ink-soft);">$15&ndash;25</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$30&ndash;60</td></tr>
+    <tr><td style="padding:10px 12px;font-weight:600;">Down jacket</td><td style="padding:10px 12px;color:var(--ink-soft);">$25&ndash;40</td><td style="padding:10px 12px;color:var(--brass-deep);font-weight:600;">$50&ndash;120</td></tr>
+  </tbody>
+</table>
 
-  <h2>The hidden costs most brands forget</h2>
+<h2>The hidden costs most brands forget</h2>
 
-  <h3>Sample and pattern charges: $50–300 per style</h3>
-  <p>Almost all small factories in China don't have their own pattern makers. Pattern making is outsourced to specialist studios — and often sample making is too. When a factory says they'll "handle everything," they usually mean they'll coordinate an external chain: separate pattern maker, separate sample room. This is normal and not a problem, but it means you pay for each step separately. The first sample almost always costs money. Revisions may or may not cost extra — confirm in advance.</p>
+<h3>Sample and pattern charges: $50&ndash;300 per style</h3>
+<p>Almost all small factories in China don't have their own pattern makers. Pattern making is outsourced to specialist studios &mdash; and often sample making is too. When a factory says they'll "handle everything," they usually mean they'll coordinate an external chain. The first sample almost always costs money. Revisions may or may not cost extra &mdash; confirm in advance.</p>
 
-  <h3>Sample fabric premium: 2–3x the bulk price</h3>
-  <p>When you're sampling, you need 2–3 metres of fabric. At that quantity, you'll pay 2–3 times the bulk production price. This is not the factory taking advantage of you — it's just how small-quantity purchasing works. Factor it in.</p>
+<h3>Sample fabric premium: 2&ndash;3x the bulk price</h3>
+<p>When you're sampling, you need 2&ndash;3 metres of fabric. At that quantity, you'll pay 2&ndash;3 times the bulk production price. This is not the factory taking advantage of you &mdash; it's just how small-quantity purchasing works. Factor it in.</p>
 
-  <h3>Third-party inspection: $200–400 per visit</h3>
-  <p>If you hire a professional inspection company (SGS, Bureau Veritas, Intertek), expect to pay $200–400 per inspection, not including travel costs to the factory.</p>
+<h3>Third-party inspection: $200&ndash;400 per visit</h3>
+<p>If you hire a professional inspection company (SGS, Bureau Veritas, Intertek), expect to pay $200&ndash;400 per inspection, not including travel costs to the factory.</p>
 
-  <h3>Freight</h3>
-  <p>Air freight runs approximately $8–15 per kg — fast but expensive. Sea freight is significantly cheaper but slow: 20–35 days to Europe or the US. For large production runs, sea is the standard choice.</p>
+<h3>Freight and import duties</h3>
+<p>Air freight runs approximately $8&ndash;15 per kg &mdash; fast but expensive. Sea freight is significantly cheaper but slow: 20&ndash;35 days to Europe or the US. Import duties depending on your country and product can range from 0 to 30%+. Check the current rate for your specific product category before calculating your landed cost.</p>
 
-  <h3>Import duties</h3>
-  <p>Depending on your country and product category, import duties can range from 0 to 30%+. In 2025–2026, US tariffs on Chinese goods have risen significantly. Check the current rate for your specific product category before calculating your landed cost.</p>
+<h2>Standard factory vs quality factory: what's the real difference</h2>
 
-  <h2>Standard factory vs quality factory: what's the real difference</h2>
+<p>Standard factories work with fast fashion clients who care about price and speed, not quality. Over time, their standards drift to match their clients. Quality factories only take orders where quality is the priority &mdash; their workers are more skilled, their management more disciplined, their prices higher.</p>
 
-  <p>The difference isn't that one is Chinese and the other isn't. The difference is the client base they serve.</p>
+<blockquote>Ask a factory: "What do you mainly produce?" If they give you a specific answer &mdash; worth trying. If they say "we can make anything" &mdash; be careful. That usually means they'll subcontract your order and take a margin, with almost no control over the actual quality.</blockquote>
 
-  <p>Standard factories work with fast fashion clients who care about price and speed, not quality. Over time, their standards drift to match their clients. Quality factories only take orders where quality is the priority. Their workers are more skilled, their management more disciplined, their prices higher.</p>
+<h2>How to assess a quote</h2>
 
-  <div class="callout">
-    <p>Ask a factory: "What do you mainly produce, and what quality level do you work at?" If they give you a specific answer — worth trying. If they say "we can make anything" — be careful. That usually means they'll subcontract your order to another factory and take a margin. The problem isn't the subcontracting itself; it's that they have almost no control over quality at the subcontractor.</p>
-  </div>
+<p>When you receive a price from a factory, check these four things:</p>
+<ul>
+  <li>Does the quote specify fabric weight (GSM) and composition? If not, quality can be quietly reduced later.</li>
+  <li>How is the sample fee calculated? Is it credited against the bulk order?</li>
+  <li>What is the lead time, and is it confirmed in writing?</li>
+  <li>What are the payment terms?</li>
+</ul>
 
-  <h2>How to assess a quote</h2>
+<p>On payment: for new clients and small orders, most factories in China require full payment upfront. This is reasonable &mdash; many factory owners have no legal recourse if a foreign buyer disappears. If the factory suits you in every other way, full payment upfront is not a red flag. One critical point: if you've agreed to pay the balance before shipment, don't change your mind and ask to pay after receipt. Agree on payment terms before production starts, and stick to them.</p>
 
-  <p>When you receive a price from a factory, check these four things before responding:</p>
+<p>If a quote comes in 30%+ below market rates: be careful. Something is being traded off &mdash; fabric quality, construction, or the expectation of price increases after you're committed.</p>
 
-  <ul class="checklist">
-    <li>Does the quote specify fabric weight (GSM) and composition? If not, it's a vague quote — quality can be quietly reduced later</li>
-    <li>How is the sample fee calculated? Is it credited against the bulk order?</li>
-    <li>What is the lead time, and is it in writing?</li>
-    <li>What are the payment terms?</li>
-  </ul>
+<h2>The bottom line</h2>
 
-  <p>On payment: for new clients and small orders, most factories in China require full payment upfront. This is reasonable — many factory owners have never left their province, let alone their country, and have no legal recourse if a foreign buyer disappears. If the factory suits you in every other way, full payment upfront is not a red flag. Payment defaults in China's garment industry are genuinely rare.</p>
+<p>Finding a good factory in China is not a platform problem. You can't search your way to the right answer on Alibaba or at the Canton Fair. It requires knowing which region makes your product category, knowing what a quality operation looks like from the inside, and knowing how to build a relationship that makes the factory want to do good work for you.</p>
 
-  <p>One critical point: if you've agreed to pay the balance before shipment, don't change your mind later and ask to pay after receipt. The factory will immediately feel they're being cheated, even if your intention was reasonable. Agree on payment terms before production starts, and stick to them.</p>
-
-  <p>If a quote comes in 30%+ below what you'd expect from market rates: be careful. Something is being traded off — fabric quality, construction, or the expectation of price increases after you're committed.</p>
-
-  <h2>The bottom line</h2>
-
-  <p>Finding a good factory in China is not a platform problem. You can't search your way to the right answer on Alibaba or at the Canton Fair. It requires knowing which region makes your product category, knowing what a quality operation looks like from the inside, and knowing how to build a relationship that makes the factory want to do good work for you.</p>
-
-  <p>If you're starting out and don't have that background yet, the most efficient thing you can do is find someone who does. That's what I do at SilkAssets.</p>
-
-  <!-- CTA BLOCK -->
-  <div class="cta-block">
-    <p>If this sounds like what you've been looking for, start here.</p>
-    <a href="https://silkassets.top" class="cta-button">SILKASSETS.TOP</a>
-  </div>
+<p>If you're starting out and don't have that background yet, the most efficient thing you can do is find someone who does. That's what I do at SilkAssets.</p>
 
 </article>
 
-<!-- AUTHOR BIO -->
-<div class="author-bio">
-  <div class="author-bio-inner">
-    <div class="author-bio-avatar">XH</div>
+<!-- ===================== CTA ===================== -->
+<div class="wrap">
+  <div class="post-cta">
+    <p>Need someone on the ground in China to manage this for you? That's exactly what SilkAssets does.</p>
+    <a class="btn btn-primary" href="mailto:hello@silkassets.top">Get in touch &rarr;</a>
+  </div>
+
+  <div class="author-box">
+    <div style="width:52px;height:52px;border-radius:50%;flex:none;background:var(--brass-deep);display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--f-display);font-weight:800;color:#fff;font-size:1.1rem;">XH</span></div>
     <div>
-      <div class="author-bio-name">Xiao Hongyi</div>
-      <p class="author-bio-desc">17 years in apparel — designer, pattern maker, brand founder, sourcing agent, production manager. Based in Wuhan, China. Founder of SilkAssets.</p>
+      <h4>Xiao Hongyi</h4>
+      <p>17 years in apparel &mdash; designer, pattern maker, brand founder, supply chain operator. Based in Wuhan, China. Founder of SilkAssets.</p>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand-name">Silk<span>Assets</span></div>
-    <p class="footer-tagline">Design files, development services and China sourcing — built from 17 years inside the apparel supply chain.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Explore</h4>
-    <a href="https://silkassets.top/#products">Products</a>
-    <a href="https://silkassets.top/blog.html">Blog</a>
-    <a href="https://silkassets.top/#about">About</a>
-    <a href="https://silkassets.top/free-checklist.html">Free checklist</a>
-  </div>
-  <div class="footer-col">
-    <h4>Contact</h4>
-    <a href="mailto:hello@silkassets.top">hello@silkassets.top</a>
-    <a href="#">WhatsApp Business: SilkAssets</a>
-    <a href="https://pinterest.com/silkassetsstudio">Pinterest</a>
-    <a href="https://instagram.com/silkassetsstudio">Instagram</a>
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
+        <p class="footer-blurb">Design files, development services and China sourcing — built from 17 years inside the apparel supply chain.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="index.html#checklist">Free checklist</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@silkassets.top">hello@silkassets.top</a>
+        <span>WhatsApp Business: SilkAssets</span>
+        <a href="https://pinterest.com/silkassetsstudio" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://instagram.com/silkassetsstudio" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 SilkAssets · silkassets.top</span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+    </div>
   </div>
 </footer>
-<div class="footer-bottom">
-  <p>© 2026 SilkAssets · silkassets.top</p>
-  <div>
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-  </div>
-</div>
 
+<script>
+const burger = document.getElementById('nav-burger');
+const nav = document.getElementById('nav-menu');
+burger.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbee5a338d51415aaea878f0f1cdbb42"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
