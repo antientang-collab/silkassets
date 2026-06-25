@@ -30,14 +30,14 @@
    ============================================================ */
 
 :root{
-  --ink:        #14233d;   /* primary ink navy */
-  --ink-soft:   #3c4a63;   /* secondary text */
-  --ink-faint:  #6b7689;   /* muted captions */
-  --paper:      #f4f5f1;   /* cool pattern-paper background */
+  --ink:        #14233d;
+  --ink-soft:   #3c4a63;
+  --ink-faint:  #6b7689;
+  --paper:      #f4f5f1;
   --card:       #ffffff;
-  --line:       #c8cdc4;   /* grid / hairline rules */
+  --line:       #c8cdc4;
   --line-soft:  #dfe2da;
-  --brass:      #ac811f;   /* gold-thread accent */
+  --brass:      #ac811f;
   --brass-deep: #8c6716;
   --brass-tint: #f0e7cf;
 
@@ -58,7 +58,6 @@ body{
   font-family:var(--f-body);
   color:var(--ink);
   background-color:var(--paper);
-  /* faint pattern-paper grid */
   background-image:
     linear-gradient(to right, rgba(20,35,61,.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(20,35,61,.035) 1px, transparent 1px);
@@ -72,7 +71,6 @@ a{ color:inherit; }
 
 .wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
 
-/* ---------- eyebrow / spec labels ---------- */
 .eyebrow{
   font-family:var(--f-mono);
   font-size:.72rem;
@@ -93,7 +91,6 @@ a{ color:inherit; }
   flex:none;
 }
 
-/* ---------- typography ---------- */
 h1,h2,h3{ font-family:var(--f-display); font-weight:800; line-height:1.05; letter-spacing:-.01em; margin:0; color:var(--ink); }
 h1{ font-size:clamp(2.4rem, 6vw, 4.1rem); }
 h2{ font-size:clamp(1.7rem, 3.6vw, 2.6rem); }
@@ -101,7 +98,6 @@ h3{ font-size:1.18rem; font-weight:700; letter-spacing:0; }
 p{ margin:0 0 1rem; }
 .lead{ font-size:clamp(1.05rem, 1.6vw, 1.22rem); color:var(--ink-soft); max-width:34em; }
 
-/* ---------- top bar ---------- */
 .topbar{
   position:sticky; top:0; z-index:50;
   background:rgba(244,245,241,.86);
@@ -130,7 +126,6 @@ p{ margin:0 0 1rem; }
 }
 .nav a.nav-cta:hover{ background:var(--ink); color:var(--paper); }
 
-/* ---------- buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; gap:.5rem;
   font-family:var(--f-mono); font-size:.82rem; letter-spacing:.06em; text-transform:uppercase;
@@ -143,9 +138,6 @@ p{ margin:0 0 1rem; }
 .btn-ghost:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
 .btn-block{ width:100%; justify-content:center; }
 
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero{ padding:clamp(48px,7vw,92px) 0 clamp(40px,6vw,72px); }
 .hero .wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,5vw,64px); align-items:center; }
 .hero-copy h1{ margin-bottom:1.4rem; }
@@ -159,7 +151,6 @@ p{ margin:0 0 1rem; }
   color:var(--ink-faint); margin-top:.8rem; text-align:center;
 }
 
-/* SVG draw-in animation */
 .draw{ stroke-dasharray:1; stroke-dashoffset:1; pathLength:1;
   animation:draw 1.5s ease forwards; }
 .draw.d2{ animation-delay:.5s; }
@@ -167,7 +158,6 @@ p{ margin:0 0 1rem; }
 @keyframes draw{ to{ stroke-dashoffset:0; } }
 @keyframes fadein{ to{ opacity:1; } }
 
-/* ---------- trust strip ---------- */
 .trust{ border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); background:rgba(255,255,255,.45); }
 .trust .wrap{ display:flex; flex-wrap:nowrap; gap:0; justify-content:space-between; padding-top:.8rem; padding-bottom:.8rem; overflow:hidden; }
 .trust span{
@@ -176,23 +166,16 @@ p{ margin:0 0 1rem; }
 }
 .trust span::before{ content:""; width:6px; height:6px; background:var(--brass); transform:rotate(45deg); display:inline-block; }
 
-/* ============================================================
-   GENERIC SECTION
-   ============================================================ */
 .section{ padding:clamp(56px,8vw,104px) 0; }
 .section-head{ max-width:42em; margin-bottom:clamp(32px,5vw,52px); }
 .section-head h2{ margin-bottom:1rem; }
 
-/* ---------- value callouts ---------- */
 .value-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,36px); }
 .value-item{ border-top:2px solid var(--ink); padding-top:1.1rem; }
 .value-item .idx{ font-family:var(--f-mono); font-size:.74rem; letter-spacing:.12em; color:var(--brass-deep); display:block; margin-bottom:.7rem; }
 .value-item h3{ margin-bottom:.5rem; }
 .value-item p{ color:var(--ink-soft); font-size:.97rem; margin:0; }
 
-/* ============================================================
-   PRODUCT CARDS (used on both pages)
-   ============================================================ */
 .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,26px); }
 .cards.two{ grid-template-columns:repeat(2,1fr); }
 
@@ -214,7 +197,6 @@ p{ margin:0 0 1rem; }
 .price{ font-family:var(--f-display); font-weight:800; font-size:1.5rem; }
 .price small{ font-family:var(--f-mono); font-weight:400; font-size:.7rem; color:var(--ink-faint); letter-spacing:.05em; }
 
-/* featured / bundle card */
 .card-feature{ background:var(--ink); color:#eef0f4; border-color:var(--ink); }
 .card-feature .card-sku{ color:#9aa6bd; }
 .card-feature h3, .card-feature .price{ color:#fff; }
@@ -223,9 +205,6 @@ p{ margin:0 0 1rem; }
 .card-feature .card-foot{ border-top-color:#33425e; }
 .card-feature .strike{ color:#8f9bb3; text-decoration:line-through; font-family:var(--f-mono); font-size:.8rem; margin-right:.4rem; }
 
-/* ============================================================
-   ABOUT PANEL (dark)
-   ============================================================ */
 .about{ background:var(--ink); color:#e9ecf2; }
 .about .wrap{ display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(28px,5vw,64px); align-items:center; padding-top:clamp(56px,8vw,96px); padding-bottom:clamp(56px,8vw,96px); }
 .about .eyebrow{ color:#d8b85a; }
@@ -237,9 +216,6 @@ p{ margin:0 0 1rem; }
 .about-stats .l{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:#9aa6bd; margin-top:.4rem; }
 .about-quote{ border-left:2px solid #d8b85a; padding-left:1.4rem; }
 
-/* ============================================================
-   CHECKLIST OPT-IN
-   ============================================================ */
 .optin{ background:var(--brass-tint); border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
 .optin .wrap{ display:grid; grid-template-columns:1.2fr 1fr; gap:clamp(24px,4vw,56px); align-items:center; padding-top:clamp(44px,6vw,72px); padding-bottom:clamp(44px,6vw,72px); }
 .optin h2{ margin-bottom:.8rem; }
@@ -252,9 +228,6 @@ p{ margin:0 0 1rem; }
 .form-row input[type=email]:focus{ outline:2px solid var(--brass); outline-offset:1px; }
 .form-note{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.04em; color:var(--ink-faint); margin-top:.8rem; }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 .footer{ background:var(--paper); border-top:1px solid var(--line-soft); }
 .footer .wrap{ padding-top:clamp(40px,5vw,56px); padding-bottom:2.2rem; }
 .footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); margin-bottom:2.4rem; }
@@ -267,18 +240,10 @@ p{ margin:0 0 1rem; }
 .footer-base, .footer-base a{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; color:var(--ink-faint); text-decoration:none; }
 .footer-base a:hover{ color:var(--brass-deep); }
 
-/* ============================================================
-   PAGE HEADER (products page)
-   ============================================================ */
 .pagehead{ padding:clamp(48px,7vw,88px) 0 clamp(8px,2vw,20px); }
 .pagehead h1{ font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:1.1rem; }
 .pagehead .lead{ max-width:40em; }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-/* ---------- mobile nav ---------- */
 .nav-burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
 .nav-burger span{ display:block; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:all .3s; }
 @media(max-width:680px){
@@ -308,20 +273,17 @@ p{ margin:0 0 1rem; }
   .about-stats{ gap:1.6rem; }
 }
 
-/* accessibility: reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{ scroll-behavior:auto; }
   .draw{ stroke-dashoffset:0; animation:none; }
   .callout{ opacity:1; animation:none; }
 }
 
-
 .card[onclick]:hover{ box-shadow:0 4px 20px rgba(0,0,0,0.12); transform:translateY(-2px); transition:all .2s; }
 </style>
 </head>
 <body>
 
-<!-- ===================== TOP BAR ===================== -->
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
@@ -338,39 +300,32 @@ p{ margin:0 0 1rem; }
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
       <p class="eyebrow">17 years in the apparel supply chain</p>
       <h1>From sketch to the <span class="em">factory floor.</span></h1>
-      <p class="lead">Design files, samples, full production and China sourcing — and the exact documents to brief any factory. Built by someone who has spent 17 years doing every part of this: design, pattern making, brand building, and supply chain, in China.</p>
+      <p class="lead">Design files, samples, full production and China sourcing — and the exact documents to brief any factory. Built by someone who has spent 17 years doing every part of this: design, pattern making, brand building, factory ownership, and supply chain, in China.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="products.html">Browse the catalog</a>
         <a class="btn btn-ghost" href="#checklist">Get the free checklist</a>
       </div>
     </div>
 
-    <!-- SIGNATURE: technical flat with measurement callouts -->
     <figure class="flat-figure">
       <svg viewBox="0 0 380 400" role="img" aria-label="Technical flat drawing of a garment with measurement callouts">
-        <!-- garment outline -->
         <path class="draw" pathLength="1"
           d="M150 82 Q190 104 230 82 L262 70 L318 104 L300 150 L252 138 L256 330 L124 330 L128 138 L80 150 L62 104 L118 70 Z"
           fill="none" stroke="#14233d" stroke-width="2.2" stroke-linejoin="round"/>
-        <!-- seam details -->
         <path class="draw d2" pathLength="1" d="M154 88 Q190 108 226 88" fill="none" stroke="#14233d" stroke-width="1.2"/>
         <path class="draw d2" pathLength="1" d="M124 320 L256 320" fill="none" stroke="#14233d" stroke-width="1.2"/>
         <path class="draw d2" pathLength="1" d="M64 112 L86 146" fill="none" stroke="#14233d" stroke-width="1.2"/>
         <path class="draw d2" pathLength="1" d="M316 112 L294 146" fill="none" stroke="#14233d" stroke-width="1.2"/>
-        <!-- placket + buttons -->
         <path class="draw d2" pathLength="1" d="M190 100 L190 322" fill="none" stroke="#14233d" stroke-width="1"/>
         <g class="callout" fill="#ac811f">
           <circle cx="190" cy="140" r="2.4"/><circle cx="190" cy="180" r="2.4"/>
           <circle cx="190" cy="220" r="2.4"/><circle cx="190" cy="260" r="2.4"/>
         </g>
-
-        <!-- CALLOUT A: chest -->
         <g class="callout" stroke="#ac811f" fill="none" stroke-width="1.3">
           <path d="M128 170 L256 170"/>
           <path d="M128 164 L128 176"/><path d="M256 164 L256 176"/>
@@ -381,8 +336,6 @@ p{ margin:0 0 1rem; }
           <text x="344" y="174" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8c6716">A</text>
           <text x="344" y="196" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#6b7689">CHEST</text>
         </g>
-
-        <!-- CALLOUT B: length -->
         <g class="callout" stroke="#ac811f" fill="none" stroke-width="1.3">
           <path d="M40 72 L40 330"/>
           <path d="M34 72 L46 72"/><path d="M34 330 L46 330"/>
@@ -398,7 +351,6 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-<!-- ===================== TRUST STRIP ===================== -->
 <div class="trust">
   <div class="wrap">
     <span>Digital products · Instant download</span>
@@ -408,7 +360,6 @@ p{ margin:0 0 1rem; }
   </div>
 </div>
 
-<!-- ===================== VALUE ===================== -->
 <section class="section">
   <div class="wrap">
     <div class="section-head">
@@ -436,7 +387,6 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-<!-- ===================== FEATURED PRODUCTS ===================== -->
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head">
@@ -475,8 +425,6 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-
-<!-- ===================== SERVICES ===================== -->
 <section class="section" style="background:#f0ede6;border-top:1px solid #ddd9d0;border-bottom:1px solid #ddd9d0;">
   <div class="wrap">
     <p class="eyebrow">Also available</p>
@@ -489,13 +437,12 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-<!-- ===================== ABOUT ===================== -->
 <section class="about" id="about">
   <div class="wrap">
     <div>
       <p class="eyebrow">Why SilkAssets</p>
       <div class="about-quote">
-        <p>I've spent 17 years in apparel — as a designer, pattern maker, brand owner, and supply chain operator, all in China. SilkAssets is everything I wish brands had before they contacted their first factory. SilkAssets is the toolkit I wish every brand had before they emailed their first factory.</p>
+        <p>I've spent 17 years in apparel — as a designer, pattern maker, brand founder, factory owner, and supply chain operator, all in China. SilkAssets is everything I wish brands had before they contacted their first factory. SilkAssets is the toolkit I wish every brand had before they emailed their first factory.</p>
       </div>
       <div class="about-stats" style="margin-top:2rem;">
         <div><div class="n" style="color:#d8b85a;">17</div><div class="l">years in supply chain</div></div>
@@ -510,7 +457,6 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-<!-- ===================== CHECKLIST OPT-IN ===================== -->
 <section class="optin" id="checklist">
   <div class="wrap">
     <div>
@@ -525,7 +471,6 @@ p{ margin:0 0 1rem; }
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
@@ -554,7 +499,6 @@ p{ margin:0 0 1rem; }
     </div>
   </div>
 </footer>
-
 
 <script>
 const burger = document.getElementById('nav-burger');
