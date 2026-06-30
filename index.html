@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SilkAssets — Production-Ready Apparel Specs</title>
-<meta name="description" content="Tech packs, patterns, and factory communication tools — built from 17 years inside the apparel supply chain. Instant download.">
+<title>SilkAssets — Fashion Design Files Built by Industry Insiders</title>
+<meta name="description" content="Flat sketches, print patterns, embroidery files and more — fashion design resources built by industry insiders with 17 years on the front line of China's fashion industry. Instant download.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SilkAssets">
-<meta property="og:title" content="SilkAssets — Production-Ready Apparel Specs">
-<meta property="og:description" content="Tech packs, patterns, and factory tools — built from 17 years inside the apparel supply chain. Instant download.">
+<meta property="og:title" content="SilkAssets — Fashion Design Files Built by Industry Insiders">
+<meta property="og:description" content="Flat sketches, print patterns, embroidery files and more — built by industry insiders with 17 years in China's fashion industry. Instant download.">
 <meta property="og:image" content="https://silkassets.top/images/products/SilkAssets_OG_Cover.webp">
 <meta property="og:url" content="https://silkassets.top/">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SilkAssets — Production-Ready Apparel Specs">
-<meta name="twitter:description" content="Tech packs, patterns, and factory tools — built from 17 years inside the apparel supply chain. Instant download.">
+<meta name="twitter:title" content="SilkAssets — Fashion Design Files Built by Industry Insiders">
+<meta name="twitter:description" content="Flat sketches, print patterns, embroidery files and more — built by industry insiders with 17 years in China's fashion industry. Instant download.">
 <meta name="twitter:image" content="https://silkassets.top/images/products/SilkAssets_OG_Cover.webp">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,6 +146,17 @@ p{ margin:0 0 1rem; }
 
 .flat-figure{ position:relative; }
 .flat-figure svg{ width:100%; height:auto; }
+.shop-stack{ position:relative; width:100%; aspect-ratio:1/1; max-width:440px; margin:0 auto; }
+.stack-img{
+  position:absolute; border-radius:4px; border:1px solid var(--line-soft);
+  box-shadow:0 18px 36px -16px rgba(20,35,61,.35);
+  object-fit:cover; background:#fff;
+  transition:transform .25s ease;
+}
+.stack-img:hover{ transform:translateY(-4px) scale(1.015); }
+.stack-1{ width:78%; aspect-ratio:16/9; top:0; right:0; z-index:1; }
+.stack-2{ width:58%; aspect-ratio:16/9; bottom:6%; left:0; z-index:2; }
+.stack-3{ width:42%; aspect-ratio:16/9; bottom:-2%; right:8%; z-index:3; }
 .flat-cap{
   font-family:var(--f-mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-faint); margin-top:.8rem; text-align:center;
@@ -288,8 +299,7 @@ p{ margin:0 0 1rem; }
   <div class="wrap">
     <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
     <nav class="nav" id="nav-menu">
-      <a class="nav-link" href="products.html">Products</a>
-      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="products.html">Shop</a>
       <a class="nav-link" href="blog.html">Blog</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-cta" href="products.html#catalog">Browse catalog</a>
@@ -303,85 +313,57 @@ p{ margin:0 0 1rem; }
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow">17 years in the apparel supply chain</p>
-      <h1>From sketch to the <span class="em">factory floor.</span></h1>
-      <p class="lead">Design files, samples, full production and China sourcing — and the exact documents to brief any factory. Built by someone who has spent 17 years doing every part of this: design, pattern making, brand building, factory ownership, and supply chain, in China.</p>
+      <p class="eyebrow">17 years in China's fashion industry</p>
+      <h1>Fashion design files built by <span class="em">industry insiders.</span></h1>
+      <p class="lead">Flat sketches, print patterns, embroidery files and more — 17 years on the front line of China's fashion industry, not guesswork from someone outside it. Designed in China, built for designers everywhere.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="products.html">Browse the catalog</a>
+        <a class="btn btn-primary" href="products.html">Shop Now</a>
         <a class="btn btn-ghost" href="#checklist">Get the free checklist</a>
       </div>
     </div>
 
     <figure class="flat-figure">
-      <svg viewBox="0 0 380 400" role="img" aria-label="Technical flat drawing of a garment with measurement callouts">
-        <path class="draw" pathLength="1"
-          d="M150 82 Q190 104 230 82 L262 70 L318 104 L300 150 L252 138 L256 330 L124 330 L128 138 L80 150 L62 104 L118 70 Z"
-          fill="none" stroke="#14233d" stroke-width="2.2" stroke-linejoin="round"/>
-        <path class="draw d2" pathLength="1" d="M154 88 Q190 108 226 88" fill="none" stroke="#14233d" stroke-width="1.2"/>
-        <path class="draw d2" pathLength="1" d="M124 320 L256 320" fill="none" stroke="#14233d" stroke-width="1.2"/>
-        <path class="draw d2" pathLength="1" d="M64 112 L86 146" fill="none" stroke="#14233d" stroke-width="1.2"/>
-        <path class="draw d2" pathLength="1" d="M316 112 L294 146" fill="none" stroke="#14233d" stroke-width="1.2"/>
-        <path class="draw d2" pathLength="1" d="M190 100 L190 322" fill="none" stroke="#14233d" stroke-width="1"/>
-        <g class="callout" fill="#ac811f">
-          <circle cx="190" cy="140" r="2.4"/><circle cx="190" cy="180" r="2.4"/>
-          <circle cx="190" cy="220" r="2.4"/><circle cx="190" cy="260" r="2.4"/>
-        </g>
-        <g class="callout" stroke="#ac811f" fill="none" stroke-width="1.3">
-          <path d="M128 170 L256 170"/>
-          <path d="M128 164 L128 176"/><path d="M256 164 L256 176"/>
-          <path d="M256 170 L330 170"/>
-        </g>
-        <g class="callout">
-          <circle cx="344" cy="170" r="12" fill="#f4f5f1" stroke="#ac811f" stroke-width="1.3"/>
-          <text x="344" y="174" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8c6716">A</text>
-          <text x="344" y="196" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#6b7689">CHEST</text>
-        </g>
-        <g class="callout" stroke="#ac811f" fill="none" stroke-width="1.3">
-          <path d="M40 72 L40 330"/>
-          <path d="M34 72 L46 72"/><path d="M34 330 L46 330"/>
-        </g>
-        <g class="callout">
-          <circle cx="40" cy="201" r="12" fill="#f4f5f1" stroke="#ac811f" stroke-width="1.3"/>
-          <text x="40" y="205" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8c6716">B</text>
-          <text transform="translate(18,201) rotate(-90)" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#6b7689">FULL LENGTH</text>
-        </g>
-      </svg>
-      <figcaption class="flat-cap">Tech Pack · Pattern · Production · Sourcing</figcaption>
+      <div class="shop-stack">
+        <img class="stack-img stack-1" src="images/products/SilkAssets_CAD09_Cover.webp" alt="Dresses & Skirts Flat Sketch Library" loading="lazy">
+        <img class="stack-img stack-2" src="images/products/SilkAssets_CAD01_Cover.webp" alt="Outerwear Flat Sketch Library" loading="lazy">
+        <img class="stack-img stack-3" src="images/products/SilkAssets_CAD03_Cover.webp" alt="Intimates & Sleepwear Flat Sketch Library" loading="lazy">
+      </div>
+      <figcaption class="flat-cap">Flat Sketches · Print Patterns · Embroidery · Fabric Texture</figcaption>
     </figure>
   </div>
 </section>
 
 <div class="trust">
   <div class="wrap">
-    <span>Digital products · Instant download</span>
-    <span>Sample development · Made in China</span>
-    <span>China sourcing · Factory direct</span>
-    <span>17 years in apparel · On the ground</span>
+    <span>17 years in China's fashion industry</span>
+    <span>Designed in China</span>
+    <span>500+ professional resources</span>
+    <span>Instant download</span>
   </div>
 </div>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">The problem</p>
-      <h2>Building a clothing brand from overseas is hard.</h2>
-      <p class="lead">Most brands hit the same walls: factories that don't understand the brief, samples that come back wrong, suppliers that are impossible to vet from the outside. SilkAssets exists because someone who has been on the factory side for 17 years decided to make that wall disappear.</p>
+      <p class="eyebrow">Why SilkAssets</p>
+      <h2>Most design resources are made by outsiders guessing.</h2>
+      <p class="lead">Plenty of digital shops sell fashion design files. Few are made by someone who has actually worked inside Chinese factories, mills and design rooms for 17 years. That difference shows up in every file.</p>
     </div>
     <div class="value-grid">
       <div class="value-item">
-        <span class="idx">01 / FILES</span>
-        <h3>The right documents</h3>
-        <p>Tech packs, BOMs, pattern files and terminology — in the format factories actually read.</p>
+        <span class="idx">01 / ACCURATE</span>
+        <h3>Production-accurate</h3>
+        <p>Flat sketches, construction details and specs that reflect how garments are actually made — not stylized guesses.</p>
       </div>
       <div class="value-item">
-        <span class="idx">02 / DEVELOP</span>
-        <h3>Sample development</h3>
-        <p>Send a sketch. We handle pattern making, sampling and production follow-up in China.</p>
+        <span class="idx">02 / AUTHENTIC</span>
+        <h3>Designed in China</h3>
+        <p>Fabric textures, prints and China-inspired patterns sourced and designed on the ground — not imagined from overseas.</p>
       </div>
       <div class="value-item">
-        <span class="idx">03 / SOURCE</span>
-        <h3>China sourcing</h3>
-        <p>We find the factory, negotiate the price, and make sure it gets made right.</p>
+        <span class="idx">03 / READY TO USE</span>
+        <h3>Instant download</h3>
+        <p>Every file is ready to drop into your own design process — no waiting, no back-and-forth.</p>
       </div>
     </div>
   </div>
@@ -390,8 +372,8 @@ p{ margin:0 0 1rem; }
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">From the catalog</p>
-      <h2>Start with the essentials.</h2>
+      <p class="eyebrow">Shop</p>
+      <h2>Featured resources.</h2>
     </div>
     <div class="cards">
       <article class="card" onclick="window.location='https://www.creem.io/payment/prod_11r4XeNHBklQIo6kw5NVzx'" style="cursor:pointer;">
@@ -420,18 +402,18 @@ p{ margin:0 0 1rem; }
       </article>
     </div>
     <div style="margin-top:2rem;">
-      <a class="btn btn-primary" href="products.html">See all products</a>
+      <a class="btn btn-primary" href="products.html">See All Products</a>
     </div>
   </div>
 </section>
 
 <section class="section" style="background:#f0ede6;border-top:1px solid #ddd9d0;border-bottom:1px solid #ddd9d0;">
   <div class="wrap">
-    <p class="eyebrow">Also available</p>
-    <h2 style="max-width:520px;margin-top:.5rem;">Need more than a template?</h2>
-    <p style="max-width:580px;margin-top:1rem;color:#5a6a7a;line-height:1.7;">From pattern to finished production — plus standalone help with materials or product sourcing — every project is managed from the factory side in China, with 17 years of supplier relationships behind it.</p>
+    <p class="eyebrow">In the shop</p>
+    <h2 style="max-width:520px;margin-top:.5rem;">Flat sketches. Print patterns. Fabric textures. And more.</h2>
+    <p style="max-width:580px;margin-top:1rem;color:#5a6a7a;line-height:1.7;">Every category is built the same way — by someone who has spent 17 years inside Chinese factories, mills and design rooms. Browse the full catalog to see everything currently available.</p>
     <div style="margin-top:2rem;display:flex;gap:.9rem;flex-wrap:wrap;">
-      <a href="services.html" class="btn btn-primary">See all services</a>
+      <a href="products.html" class="btn btn-primary">Browse the shop</a>
       <a href="mailto:hello@silkassets.top" class="btn btn-ghost">Get in touch</a>
     </div>
   </div>
@@ -442,17 +424,17 @@ p{ margin:0 0 1rem; }
     <div>
       <p class="eyebrow">Why SilkAssets</p>
       <div class="about-quote">
-        <p>I've spent 17 years in apparel — as a designer, pattern maker, brand founder, factory owner, and supply chain operator, all in China. SilkAssets is everything I wish brands had before they contacted their first factory. SilkAssets is the toolkit I wish every brand had before they emailed their first factory.</p>
+        <p>I've spent 17 years in fashion — as a designer, pattern maker, brand founder, factory owner, and supply chain operator, all in China. SilkAssets is the toolkit I wish every designer had: resources built from the inside, not imagined from the outside.</p>
       </div>
       <div class="about-stats" style="margin-top:2rem;">
-        <div><div class="n" style="color:#d8b85a;">17</div><div class="l">years in supply chain</div></div>
-        <div><div class="n" style="color:#d8b85a;">CN</div><div class="l">on the ground</div></div>
+        <div><div class="n" style="color:#d8b85a;">17</div><div class="l">years in the industry</div></div>
+        <div><div class="n" style="color:#d8b85a;">CN</div><div class="l">designed on the ground</div></div>
       </div>
     </div>
     <div>
-      <h2>Made by an insider, not a template shop.</h2>
-      <p>Every document here is built the way a real factory wants to receive it — diagram-led, precise, easy to translate. The goal is simple: fewer wrong samples, fewer delays, and far fewer "what did you mean?" emails between you and your manufacturer.</p>
-      <p style="margin-bottom:0;"><a href="products.html" style="color:#d8b85a; font-family:var(--f-mono); font-size:1.05rem; letter-spacing:.05em; text-decoration:none; font-weight:600;">→ Browse the catalog</a></p>
+      <h2>Made by an insider, not a stock library.</h2>
+      <p>Every file here reflects how garments are actually designed and made — accurate construction, real fabric behavior, production-ready detail. The goal is simple: resources you can trust enough to actually use, not just look at.</p>
+      <p style="margin-bottom:0;"><a href="products.html" style="color:#d8b85a; font-family:var(--f-mono); font-size:1.05rem; letter-spacing:.05em; text-decoration:none; font-weight:600;">→ Browse the shop</a></p>
     </div>
   </div>
 </section>
@@ -476,11 +458,11 @@ p{ margin:0 0 1rem; }
     <div class="footer-top">
       <div>
         <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
-        <p class="footer-blurb">Design files, development services and China sourcing — built from 17 years inside the apparel supply chain.</p>
+        <p class="footer-blurb">Fashion design files built from 17 years inside China's fashion industry.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="products.html">Products</a>
+        <a href="products.html">Shop</a>
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="#checklist">Free checklist</a>

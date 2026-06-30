@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products — SilkAssets</title>
-<meta name="description" content="Tech pack templates, an English–Chinese garment phrasebook, a factory guide, and more. Instant download, built from 17 years in the apparel supply chain.">
+<title>Shop — SilkAssets</title>
+<meta name="description" content="Flat sketches, print patterns, embroidery files, fabric textures and more — fashion design resources built by industry insiders. Instant download.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SilkAssets">
-<meta property="og:title" content="Products — SilkAssets">
-<meta property="og:description" content="Tech pack templates, an English–Chinese phrasebook, and a factory guide. Built from 17 years in the supply chain.">
+<meta property="og:title" content="Shop — SilkAssets">
+<meta property="og:description" content="Flat sketches, print patterns, embroidery files, fabric textures and more — built by industry insiders. Instant download.">
 <meta property="og:image" content="https://silkassets.top/images/products/SilkAssets_OG_Cover.webp">
 <meta property="og:url" content="https://silkassets.top/products.html">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Products — SilkAssets">
-<meta name="twitter:description" content="Tech pack templates, an English–Chinese phrasebook, and a factory guide. Built from 17 years in the supply chain.">
+<meta name="twitter:title" content="Shop — SilkAssets">
+<meta name="twitter:description" content="Flat sketches, print patterns, embroidery files, fabric textures and more — built by industry insiders. Instant download.">
 <meta name="twitter:image" content="https://silkassets.top/images/products/SilkAssets_OG_Cover.webp">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -288,6 +288,17 @@ p{ margin:0 0 1rem; }
 .pagehead h1{ font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:1.1rem; }
 .pagehead .lead{ max-width:40em; }
 
+.cat-filter{ display:flex; flex-wrap:wrap; gap:.6rem; padding-bottom:1.6rem; border-bottom:1px solid var(--line-soft); }
+.cat-btn{
+  font-family:var(--f-mono); font-size:.76rem; letter-spacing:.05em;
+  background:transparent; border:1.5px solid var(--line); color:var(--ink-soft);
+  padding:.5rem .95rem; border-radius:20px; cursor:pointer;
+  transition:all .15s ease;
+}
+.cat-btn:hover{ border-color:var(--brass); color:var(--ink); }
+.cat-btn.active{ background:var(--ink); border-color:var(--ink); color:#fff; }
+.card.hide{ display:none; }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -361,8 +372,7 @@ window.addEventListener('load', function() {
   <div class="wrap">
     <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
     <nav class="nav" id="nav-menu">
-      <a class="nav-link" href="products.html#top">Products</a>
-      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="products.html#top">Shop</a>
       <a class="nav-link" href="blog.html">Blog</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-cta" href="products.html#catalog">Browse catalog</a>
@@ -376,16 +386,16 @@ window.addEventListener('load', function() {
 <!-- ===================== PAGE HEAD ===================== -->
 <section class="pagehead">
   <div class="wrap">
-    <p class="eyebrow">The catalog</p>
-    <h1>Production-ready, instant download.</h1>
-    <p class="lead">Everything here is a standard, reusable document — built the way factories want to receive it. Buy once, use on every style you make.</p>
+    <p class="eyebrow">The Shop</p>
+    <h1>Fashion design files, ready to download.</h1>
+    <p class="lead">Flat sketches, print patterns, embroidery files and more — built by industry insiders, not imagined from the outside. Buy once, use on every style you make.</p>
   </div>
 </section>
 
 <!-- ===================== BUNDLE (FEATURED) ===================== -->
 <section class="section" style="padding-top:2.4rem; padding-bottom:1.2rem;">
   <div class="wrap">
-    <article class="card card-feature">
+    <article class="card card-feature" data-cat="guide">
       <div class="bundle-layout">
         <div class="bundle-imgs">
           <img src="images/products/SilkAssets_TP01_Cover.webp" alt="Tech Pack Template">
@@ -407,16 +417,33 @@ window.addEventListener('load', function() {
   </div>
 </section>
 
+<!-- ===================== CATEGORY FILTER ===================== -->
+<section class="section" id="catalog" style="padding-top:1.2rem; padding-bottom:0;">
+  <div class="wrap">
+    <div class="cat-filter" id="cat-filter">
+      <button class="cat-btn active" data-filter="all">All</button>
+      <button class="cat-btn" data-filter="china">China-Inspired</button>
+      <button class="cat-btn" data-filter="flat-sketch">Flat Sketches</button>
+      <button class="cat-btn" data-filter="print">Print Patterns</button>
+      <button class="cat-btn" data-filter="embroidery">Embroidery</button>
+      <button class="cat-btn" data-filter="sublimation">Sublimation</button>
+      <button class="cat-btn" data-filter="texture">Fabric Texture</button>
+      <button class="cat-btn" data-filter="knitting">Knitting</button>
+      <button class="cat-btn" data-filter="guide">Guides &amp; References</button>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== PRODUCT GRID — TOOLS & TEMPLATES ===================== -->
-<section class="section" id="catalog" style="padding-top:1.2rem;">
+<section class="section" style="padding-top:1.2rem;">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Tools &amp; Templates</p>
-      <h2>Build it right the first time.</h2>
+      <p class="eyebrow">Guides &amp; References</p>
+      <h2>For designers working with China.</h2>
     </div>
     <div class="cards">
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_11r4XeNHBklQIo6kw5NVzx'" style="cursor:pointer;">
+      <article class="card" data-cat="guide" onclick="window.location='https://www.creem.io/payment/prod_11r4XeNHBklQIo6kw5NVzx'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_TP01_Cover.webp" alt="Professional Tech Pack Template" loading="lazy"></div>
         <div class="card-sku"><span>TP-01</span><span>TEMPLATE</span></div>
         <h3>Professional Tech Pack Template</h3>
@@ -428,7 +455,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_6rPaE6GlB9FSewVA7BWA2j'" style="cursor:pointer;">
+      <article class="card" data-cat="guide" onclick="window.location='https://www.creem.io/payment/prod_6rPaE6GlB9FSewVA7BWA2j'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_RB01_Cover.webp" alt="The Garment Factory Phrasebook" loading="lazy"></div>
         <div class="card-sku"><span>RB-01</span><span>REFERENCE</span></div>
         <h3>The Garment Factory Phrasebook</h3>
@@ -440,7 +467,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_5gD7BKwfnGxRAy3mbm1hly'" style="cursor:pointer;">
+      <article class="card" data-cat="guide" onclick="window.location='https://www.creem.io/payment/prod_5gD7BKwfnGxRAy3mbm1hly'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_GD01_Cover.webp" alt="Working With Chinese Factories" loading="lazy"></div>
         <div class="card-sku"><span>GD-01</span><span>GUIDE</span></div>
         <h3>Working With Chinese Factories</h3>
@@ -457,15 +484,15 @@ window.addEventListener('load', function() {
 </section>
 
 <!-- ===================== PRODUCT GRID — DESIGN REFERENCE LIBRARIES ===================== -->
-<section class="section" id="library" style="padding-top:.4rem;">
+<section class="section" style="padding-top:.4rem;">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Design Reference Libraries</p>
+      <p class="eyebrow">Flat Sketches</p>
       <h2>Flat sketch libraries for faster development.</h2>
       <p class="lead">Reference and inspiration sketches built from real production-style flats — not exclusive designs, not production files. Use them to speed up tech pack development, mood boards and your own design process.</p>
     </div>
 
-    <article class="card card-feature" style="margin-bottom:2.4rem;">
+    <article class="card card-feature" data-cat="flat-sketch" style="margin-bottom:2.4rem;">
       <div class="bundle-layout">
         <div class="bundle-imgs" style="width:380px;">
           <img src="images/products/SilkAssets_CAD00_Cover.webp" alt="Complete Flat Sketch Library Bundle — 767 styles across 12 libraries" style="height:auto; aspect-ratio:16/9; object-fit:cover;">
@@ -485,7 +512,7 @@ window.addEventListener('load', function() {
 
     <div class="cards">
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_74AluLthhqgvsGmO4gpmg2'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_74AluLthhqgvsGmO4gpmg2'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD01_Cover.webp" alt="Outerwear Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-01</span><span>LIBRARY</span></div>
         <h3>Outerwear Flat Sketch Library</h3>
@@ -497,7 +524,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_4uK17fV2KPjxKyjehFHcCM'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_4uK17fV2KPjxKyjehFHcCM'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD02_Cover.webp" alt="Swimwear Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-02</span><span>LIBRARY</span></div>
         <h3>Swimwear Flat Sketch Library</h3>
@@ -509,7 +536,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_1I6xXKwsRc2DYifBGkOd9F'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_1I6xXKwsRc2DYifBGkOd9F'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD03_Cover.webp" alt="Intimates & Sleepwear Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-03</span><span>LIBRARY</span></div>
         <h3>Intimates &amp; Sleepwear Flat Sketch Library</h3>
@@ -521,7 +548,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_43h16LS0nd7TPDU74Di9l5'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_43h16LS0nd7TPDU74Di9l5'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD04_Cover.webp" alt="Tees & Sweatshirts Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-04</span><span>LIBRARY</span></div>
         <h3>Tees &amp; Sweatshirts Flat Sketch Library</h3>
@@ -533,7 +560,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_1aKb9BkkvvpZnM5D4nl2eJ'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_1aKb9BkkvvpZnM5D4nl2eJ'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD05_Cover.webp" alt="Shirts Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-05</span><span>LIBRARY</span></div>
         <h3>Shirts Flat Sketch Library</h3>
@@ -545,7 +572,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_3P8k4oHamTuohJFboX3W9n'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_3P8k4oHamTuohJFboX3W9n'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD06_Cover.webp" alt="Coats & Trench Coats Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-06</span><span>LIBRARY</span></div>
         <h3>Coats &amp; Trench Coats Flat Sketch Library</h3>
@@ -557,7 +584,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_68dNCoEE6xF22n229t2VaE'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_68dNCoEE6xF22n229t2VaE'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD07_Cover.webp" alt="Pants, Shorts & Jumpsuits Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-07</span><span>LIBRARY</span></div>
         <h3>Pants, Shorts &amp; Jumpsuits Flat Sketch Library</h3>
@@ -569,7 +596,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_68JuAOoZ8knuBacDuCYHv6'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_68JuAOoZ8knuBacDuCYHv6'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD08_Cover.webp" alt="Down Jackets & Fur Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-08</span><span>LIBRARY</span></div>
         <h3>Down Jackets &amp; Fur Flat Sketch Library</h3>
@@ -581,7 +608,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_5wJkO0fF31otzRCYnWejiu'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_5wJkO0fF31otzRCYnWejiu'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD09_Cover.webp" alt="Dresses & Skirts Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-09</span><span>LIBRARY</span></div>
         <h3>Dresses &amp; Skirts Flat Sketch Library</h3>
@@ -593,7 +620,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_3tH7Pj1mIkJS3h5WRIYWef'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_3tH7Pj1mIkJS3h5WRIYWef'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD10_Cover.webp" alt="Casual Dresses Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-10</span><span>LIBRARY</span></div>
         <h3>Casual Dresses Flat Sketch Library</h3>
@@ -605,7 +632,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_4zfH4NQImBJUyKFrWZeSyI'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_4zfH4NQImBJUyKFrWZeSyI'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD11_Cover.webp" alt="Jackets Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-11</span><span>LIBRARY</span></div>
         <h3>Jackets Flat Sketch Library</h3>
@@ -617,7 +644,7 @@ window.addEventListener('load', function() {
         </div>
       </article>
 
-      <article class="card" onclick="window.location='https://www.creem.io/payment/prod_6yAbqQufR5aMfFhACLb7K4'" style="cursor:pointer;">
+      <article class="card" data-cat="flat-sketch" onclick="window.location='https://www.creem.io/payment/prod_6yAbqQufR5aMfFhACLb7K4'" style="cursor:pointer;">
         <div class="card-img"><img src="images/products/SilkAssets_CAD12_Cover.webp" alt="Activewear Flat Sketch Library" loading="lazy"></div>
         <div class="card-sku"><span>CAD-12</span><span>LIBRARY</span></div>
         <h3>Activewear Flat Sketch Library</h3>
@@ -662,11 +689,11 @@ window.addEventListener('load', function() {
     <div class="footer-top">
       <div>
         <a class="brand" href="index.html"><img src="data:image/webp;base64,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" alt="SilkAssets" style="height:38px;width:auto;display:block;"></a>
-        <p class="footer-blurb">Production-ready apparel specs — tech packs, patterns, and factory communication tools, built from 17 years inside the supply chain.</p>
+        <p class="footer-blurb">Fashion design files built from 17 years inside China's fashion industry.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="products.html#top">Products</a>
+        <a href="products.html#top">Shop</a>
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="index.html#checklist">Free checklist</a>
@@ -690,6 +717,24 @@ window.addEventListener('load', function() {
 const burger = document.getElementById('nav-burger');
 const nav = document.getElementById('nav-menu');
 burger.addEventListener('click', () => nav.classList.toggle('open'));
+
+// 品类筛选
+const catBtns = document.querySelectorAll('.cat-btn');
+const allCards = document.querySelectorAll('.card[data-cat]');
+catBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    catBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    allCards.forEach(card => {
+      if (filter === 'all' || card.dataset.cat === filter) {
+        card.classList.remove('hide');
+      } else {
+        card.classList.add('hide');
+      }
+    });
+  });
+});
 
 // 处理Products和BROWSE CATALOG在当前页面的跳转
 document.querySelectorAll('a[href="products.html#top"]').forEach(a => {
